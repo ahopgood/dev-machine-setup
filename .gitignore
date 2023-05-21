@@ -1,0 +1,2 @@
+*.idea
+srv/salt/pillar/base/**/secrets.sls
