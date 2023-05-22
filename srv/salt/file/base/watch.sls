@@ -2,6 +2,5 @@
 {% if os == "MacOS" %}
 watch:
   pkg.installed:
-    - pkgs:
-        - watch
+    - version: '4.0.3'
 {% endif %}
