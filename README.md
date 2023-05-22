@@ -21,6 +21,9 @@ Software managed by this project:
 * Slack
 * 1password 
 * Go?
+* git
+* Virtualbox
+* Vagrant
 
 ## Salt
 I shall use [salt stack](https://saltproject.io/) to provision packages for each work environment; MacOS, Linux etc, and per company where necessary.  

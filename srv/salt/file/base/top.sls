@@ -3,3 +3,4 @@ base:
     - watch
   '*':
     - jq
+    - java.17
