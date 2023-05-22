@@ -1,20 +1,24 @@
 # dev-machine-setup
 Repo for storing information on my dev machine setup for work
 
-Software Manged by this project:
+Software managed by this project:
 * chrome
 * Java 8
 * Java 11
 * Java 17
 * IntelliJ
 * Jenv
-* watch 
+* watch - macos
+* viscosity - macos
 * jq
 * aws-cli 
 * maven 
 * meld
 * dropbox
-* keepass XC
+* docker desktop - macos
+* docker-compose
+* keepass XC - macos
+* Slack
 * 1password 
 * Go?
 

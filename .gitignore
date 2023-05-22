@@ -1,2 +1,3 @@
 *.idea
 srv/salt/pillar/base/**/secrets.sls
+srv/salt/file/base/installers
