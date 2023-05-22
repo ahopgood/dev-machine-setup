@@ -10,6 +10,8 @@ Software managed by this project:
 * Jenv
 * watch - macos
 * viscosity - macos
+* homebrew - macos
+* atom
 * jq
 * aws-cli 
 * maven 
@@ -22,6 +24,9 @@ Software managed by this project:
 * 1password 
 * Go?
 * git
+* grype
+* syft
+* mysql client 
 * Virtualbox
 * Vagrant
 
@@ -47,4 +52,5 @@ Design notes:
 #### Prerequisites
 * Python 2
 * [Homebrew](https://brew.sh/)
+  * Requires XCode command line tools `xcode-select --install`
 * [Rosetta2](https://support.apple.com/en-gb/HT211861) - for x86_64 translation to ARM instructions
