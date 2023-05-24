@@ -10,13 +10,13 @@ Software managed by this project:
 * Jenv
 * watch - macos
 * viscosity - macos
+* OpenVPN
 * jq
 * aws-cli 
-* maven 
+* maven
+* gradle
 * meld
 * dropbox
-* docker desktop - macos
-* docker-compose
 * keepass XC - macos
 * Slack
 * 1password 
@@ -24,6 +24,17 @@ Software managed by this project:
 * git
 * Virtualbox
 * Vagrant
+* iterm2 - macos
+* Databases:
+  * mysql-client
+  * pdadmin4 (postgres)
+* Docker  
+  * docker desktop - macos
+  * docker-compose
+  * grype
+  * syft
+  * dive
+* kubectl
 
 ## Salt
 I shall use [salt stack](https://saltproject.io/) to provision packages for each work environment; MacOS, Linux etc, and per company where necessary.  
