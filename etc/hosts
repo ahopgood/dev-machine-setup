@@ -1,0 +1,137 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+	localhost	whoami.docker.localhost
+	localhost 	test.vm.localhost
+	192.168.2.5		test.alexanderhopgood.com
+	#192.168.33.10		test.alexanderhopgood.com
+	192.168.2.5		test.alexanderhopgood.net
+	#192.168.33.10		test.alexanderhopgood.net
+	192.168.2.5		test.alexhopgood.co.uk
+	192.168.2.5		test.altairbob.com
+	192.168.2.5		test.altairbob.net
+	192.168.2.5		test.altairbob.co.uk
+	192.168.2.5		test.katherinemorley.net
+	192.168.2.5		test.katherinemorley.co.uk
+	192.168.2.5		test.ewhopgood.com
+	192.168.2.5		test.prhopgood.com
+	192.168.2.5		test.erhopgood.com
+	192.168.2.5		test.bookartandsoul.com
+	#192.168.33.10	test.bookartandsoul.com
+
+	192.168.2.5		alexanderhopgood.com
+	192.168.2.5		www.alexanderhopgood.com
+	192.168.2.5		alexanderhopgood.net
+	192.168.2.5		www.alexanderhopgood.net
+	192.168.2.5		alexhopgood.co.uk
+	192.168.2.5		www.alexhopgood.co.uk
+	192.168.2.5		altairbob.com
+	192.168.2.5		www.altairbob.com
+	192.168.2.5		altairbob.net
+	192.168.2.5		www.altairbob.net
+	192.168.2.5		altairbob.co.uk
+	192.168.2.5		www.altairbob.co.uk
+	192.168.2.5		katherinemorley.net
+	192.168.2.5		www.katherinemorley.net
+	192.168.2.5		katherinemorley.co.uk
+	192.168.2.5		www.katherinemorley.co.uk
+	192.168.2.5		ewhopgood.com
+	192.168.2.5		www.ewhopgood.com
+	192.168.2.5		staging.ewhopgood.com
+	192.168.2.5		prhopgood.com
+	192.168.2.5		www.prhopgood.com
+	192.168.2.5		erhopgood.com
+	192.168.2.5		www.erhopgood.com
+	192.168.2.5		bookartandsoul.com
+	192.168.2.5		www.bookartandsoul.com
+	192.168.2.5		staging.bookartandsoul.com
+
+	192.168.4.8 	staging.alexanderhopgood.com
+	192.168.4.8 	www.staging.alexanderhopgood.com
+	192.168.4.8 	www.staging.altairbob.com
+	192.168.4.8 	staging.altairbob.com
+	192.168.4.8 	www.staging.altairbob.net
+	192.168.4.8 	staging.altairbob.net
+	192.168.4.8 	www.staging.altairbob.co.uk
+	192.168.4.8 	staging.altairbob.co.uk
+
+#	192.168.2.5		booksonic.alexanderhopgood.com
+#	192.168.4.6		booksonic.test.alexanderhopgood.com
+	192.168.2.5		bookstack.alexanderhopgood.com
+	192.168.4.6		bookstack.test.alexanderhopgood.com
+	192.168.2.5		calibre-web.alexanderhopgood.com
+	192.168.4.7		calibre-web.test.alexanderhopgood.com
+	192.168.4.8		calibre-web.staging.alexanderhopgood.com
+	192.168.2.5		consul.alexanderhopgood.com
+	192.168.4.7		consul.test.alexanderhopgood.com
+	192.168.2.5		consul.staging.alexanderhopgood.com
+	192.168.2.5		heimdall.alexanderhopgood.com
+#	192.168.4.7		heimdall.test.alexanderhopgood.com
+	192.168.4.8		heimdall.staging.alexanderhopgood.com
+	192.168.2.5		jenkins.alexanderhopgood.com
+	192.168.4.7		jenkins.test.alexanderhopgood.com
+	192.168.2.5		kanboard.alexanderhopgood.com
+	192.168.2.5		kanboard.test.alexanderhopgood.com
+	192.168.2.5		netdata.alexanderhopgood.com
+#	192.168.4.6		netdata.test.alexanderhopgood.com
+	192.168.2.5		netdata.test.alexanderhopgood.com
+	192.168.2.5		nomad.alexanderhopgood.com
+	192.168.4.7		nomad.test.alexanderhopgood.com
+	192.168.4.8		nomad.staging.alexanderhopgood.com
+#	192.168.2.5		nomad.staging.alexanderhopgood.com
+	192.168.2.5		plex.alexanderhopgood.com
+	192.168.4.6		plex.test.alexanderhopgood.com
+	192.168.2.5		registry.alexanderhopgood.com
+	192.168.4.7		registry.test.alexanderhopgood.com
+	192.168.4.8		registry.staging.alexanderhopgood.com
+	192.168.2.5		registry.staging.alexanderhopgood.com
+	192.168.2.5		registry-web.alexanderhopgood.com
+#	192.168.2.4		registry-web.test.alexanderhopgood.com
+	192.168.4.8		registry-web.staging.alexanderhopgood.com
+#	192.168.2.5		tech-radar.alexanderhopgood.com
+#	192.168.4.7		tech-radar.test.alexanderhopgood.com
+	192.168.2.5		traefik.alexanderhopgood.com
+	192.168.4.7		traefik.test.alexanderhopgood.com
+	192.168.4.8		traefik.staging.alexanderhopgood.com
+#	192.168.2.5		traefik.staging.alexanderhopgood.com
+#	192.168.2.5		wallabag.alexanderhopgood.com
+	192.168.4.6		wallabag.test.alexanderhopgood.com
+	192.168.2.5		ubooquity.alexanderhopgood.com
+	192.168.4.6		ubooquity.test.alexanderhopgood.com
+	192.168.2.5		ubooquity.admin.alexanderhopgood.com
+	192.168.4.6		ubooquity.admin.test.alexanderhopgood.com
+#	192.168.4.8		yopass.staging.alexanderhopgood.com
+#	192.168.2.5		yopass.staging.alexanderhopgood.com
+
+#   141.0.150.202		cv.alexanderhopgood.com
+#	141.0.150.202	bookstack.alexanderhopgood.com
+#	141.0.150.202	kanboard.alexanderhopgood.com
+#	141.0.150.202	registry-web.alexanderhopgood.com
+#	141.0.150.202	netdata.alexanderhopgood.com
+#	141.0.150.202	traefik.alexanderhopgood.com
+#	141.0.150.202	plex.alexanderhopgood.com
+#	141.0.150.202	jenkins.alexanderhopgood.com
+#	141.0.150.202	tech-radar.alexanderhopgood.com
+#	141.0.150.202	alexanderhopgood.com
+#	141.0.150.202	alexanderhopgood.net
+#	141.0.150.202	alexhopgood.co.uk
+#	141.0.150.202	katherinemorley.co.uk
+#	141.0.150.202	blog.katherinemorley.co.uk
+#   141.0.150.202	cv.alexanderhopgood.com

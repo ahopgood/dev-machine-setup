@@ -64,3 +64,49 @@
 * [Calibre Desktop 6.21.0](https://download.calibre-ebook.com/6.21.0/)
     * [General download](https://calibre-ebook.com/download_windows)
     * [obok plugin](https://github.com/apprenticeharper/DeDRM_tools/releases/download/v7.2.1/DeDRM_tools_7.2.1.zip) DRM tools
+
+## Configuration
+### Disabling Search in Start Menu
+[Disable windows search](https://www.bennetrichter.de/en/tutorials/windows-10-disable-web-search)
+* `Windows Key + R`
+* `regedit`
+* `HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows`
+* Create a new key called `Explorer`
+* Create a new `DWORD (32-bit)` value with name `DisableSearchBoxSuggestions` and value `1`
+* Save and relogin or reboot
+
+### Setting up PuTTY keys
+* alexander
+  * Obtain from Dropbox\Secure Container and load into Truecrypt
+  * Save to `C:\Users\Alexander\.ssh\alexhopgood20160627id_rsa.ppk`
+* vagrant
+  * Obtain from Dropbox\Secure Container and load into Truecrypt
+  * Save to `C:\Users\Alexander\.vagrant.d\20160626_vagrant_private_key.ppk`
+* Sessions via cmd running with Admin rights:
+  * Export PuTTY sessions with keys
+  ```
+  regedit /e "%USERPROFILE%\Desktop\putty-sessions.reg" HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions
+  ```
+  * Export PuTTY sessions without keys
+  ```
+  regedit /e "%USERPROFILE%\Desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham
+  ```
+  * Import by double-clicking the registry entry or running (obtained from Truecrypt):
+  ```
+  regedit /i putty-sessions.reg
+  regedit /i putty.reg
+  ```
+### /etc/hosts
+See [/etc/hosts](#/etc/hosts) in this project
+
+### Local DNS
+Update your router to use your dnsmasq server IP `192.168.2.5`
+Alternate option
+* `Network and Internet Settings`
+* `Change adapter options`
+* Right-click `properties`
+* Unselect `Internet Protocol Version 6`
+* Select `Internet Protocol Version 4` and then `Properties` to point to your DNS server
+
+### Static DHCP IP
+* Add the MAC address from this machine to the router's DHCP router
