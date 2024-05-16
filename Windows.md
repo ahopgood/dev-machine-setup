@@ -66,6 +66,12 @@
     * [obok plugin](https://github.com/apprenticeharper/DeDRM_tools/releases/download/v7.2.1/DeDRM_tools_7.2.1.zip) DRM tools
 
 ## Configuration
+### Network drive
+* My Computer
+* Add a network location
+* Look up Samba share in Keepass for the server location
+* Browse -> raidmirror0
+* Enter credentials
 ### Disabling Search in Start Menu
 [Disable windows search](https://www.bennetrichter.de/en/tutorials/windows-10-disable-web-search)
 * `Windows Key + R`
@@ -110,3 +116,11 @@ Alternate option
 
 ### Static DHCP IP
 * Add the MAC address from this machine to the router's DHCP router
+
+### Dev Infrastructure
+* Vagrant-Puppet project
+  * Use the copy script in dropbox to move debian installers into the project folder
+* Infrastructure
+  * Copy secrets into salt/srv/salt/pillar/**/secrets.sls
+  * Copy installer packages for salt into salt/bin/bash/packages
+  * Copy installers used by salt module salt/srv/salt/file/base/offline
