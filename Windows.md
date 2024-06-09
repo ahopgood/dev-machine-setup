@@ -36,6 +36,14 @@
 * [GraphViz](https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/10.0.1/windows_10_cmake_Release_graphviz-install-10.0.1-win64.exe)
   * [General GraphViz installer page](https://graphviz.org/download/)
 
+### IntelliJ Plugins
+* [Go](https://plugins.jetbrains.com/plugin/9568-go)
+* [Go Template](https://plugins.jetbrains.com/plugin/10581-go-template)
+* [Makefile language](https://plugins.jetbrains.com/plugin/9333-makefile-language)
+* [Lombok](https://plugins.jetbrains.com/plugin/6317-lombok)
+* [PlantUML Parse](https://plugins.jetbrains.com/plugin/15524-plantuml-parser)
+* [BashSupport Pro](https://plugins.jetbrains.com/plugin/13841-bashsupport-pro)
+
 ## General Tools
 * [Yubico Authenticator](https://www.yubico.com/products/yubico-authenticator/#h-download-yubico-authenticator)
 * [Canon TS8300](https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAxMDM3NjA0&cmp=ABX&lang=EN)
@@ -82,12 +90,15 @@
 * Save and relogin or reboot
 
 ### Setting up PuTTY keys
-* alexander
-  * Obtain from Dropbox\Secure Container and load into Truecrypt
-  * Save to `C:\Users\Alexander\.ssh\alexhopgood20160627id_rsa.ppk`
+* alexander - Vagrant
+  * Obtain from `Dropbox\Secure Container\20170926_vagrant_private_key\20170926_vagrant_private_key` and load into Truecrypt
+  * Save to `C:\Users\Alexander\.vagrant.d\20170926_vagrant_private_key`
+* alexander - PuTTY
+  * Obtain from `Dropbox\Secure Container\20170926_vagrant_private_key\20160626_vagrant_private_key.ppk"` and load into Truecrypt
+    * Save to `C:\Users\Alexander\.vagrant.d\20160626_vagrant_private_key.ppk"`
 * vagrant
-  * Obtain from Dropbox\Secure Container and load into Truecrypt
-  * Save to `C:\Users\Alexander\.vagrant.d\20160626_vagrant_private_key.ppk`
+  * Obtain from `Dropbox\Secure Container\insecure private\insecure_private_key` and load into Truecrypt
+  * Save to `C:\Users\Alexander\.vagrant.d\insecure_private_key`
 * Sessions via cmd running with Admin rights:
   * Export PuTTY sessions with keys
   ```
@@ -124,3 +135,17 @@ Alternate option
   * Copy secrets into salt/srv/salt/pillar/**/secrets.sls
   * Copy installer packages for salt into salt/bin/bash/packages
   * Copy installers used by salt module salt/srv/salt/file/base/offline
+
+## Windows 11 Customisations
+* Restore original right-click context menu
+  * [https://www.elevenforum.com/t/disable-show-more-options-context-menu-in-windows-11.1589/](https://www.elevenforum.com/t/disable-show-more-options-context-menu-in-windows-11.1589/)
+  * Disable for current user
+  * `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve`
+  * Logout/Login or restart the machine
+* Stop start up services
+  * Task Manager > Start up apps > One Drive > Right Click > Disable
+  * Task Manager > Start up apps > Microsoft Edge > Right Click > Disable
+* Remove hard coded navigation panel in Windows File Explorer
+  * Remove Gallery 
+  * Remove One Drive
+* Remove search in start menu - same as Windows 10
