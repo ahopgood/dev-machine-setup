@@ -65,6 +65,15 @@
 * [DS4 Windows](https://ds4-windows.com/download/ryochan7-ds4windows/)
 * [DsHidMini](https://github.com/nefarius/DsHidMini/releases/download/v2.2.282.0/dshidmini_v2.2.282.0.zip)
 * [Exact Audio Copy 1.6](https://www.exactaudiocopy.de/eac-1.6.exe)
+  * Flac output: 
+    * EAC > Compression Options > External Compression:
+      * Tick "Use external compression"
+      * Parameter passing scheme: `User Defined Encoder`
+      * Use file extention: `.flac`
+      * Program: `C:\Program Files (x86)\Exact Audio Copy\Flac\flac.exe`
+      * Bit rate: `1024 kBit/s`
+  * Add album and artist to generated files:
+    * EAC > EAC options > Filename > `%artist%\%albumtitle%\%tracknr2% %title%`
 * [SABnzbd](https://github.com/sabnzbd/sabnzbd/releases/download/4.2.3/SABnzbd-4.2.3-win-setup.exe)
 * [MP3Tag](https://www.mp3tag.de/en/dodownload64.html)
 * [Handbrake 1.2.2](https://handbrake.fr/rotation.php?file=HandBrake-1.2.2-x86_64-Win_GUI.exe&old=true)
