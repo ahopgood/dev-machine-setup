@@ -72,6 +72,10 @@
       * Use file extention: `.flac`
       * Program: `C:\Program Files (x86)\Exact Audio Copy\Flac\flac.exe`
       * Bit rate: `1024 kBit/s`
+      * Command line parameters
+      ```
+      -8 -V -T "ARTIST=%artist%" -T "TITLE=%title%" -T "ALBUM=%albumtitle%" -T "DATE=%year%" -T "TRACKNUMBER=%tracknr%" -T "GENRE=%genre%" -T "PERFORMER=%albuminterpret%" -T "COMPOSER=%composer%" %haslyrics%--tag-from-file=LYRICS="%lyricsfile%"%haslyrics% -T "ALBUMARTIST=%albumartist%" -T "DISCNUMBER=%cdnumber%" -T "TOTALDISCS=%totalcds%" -T "TOTALTRACKS=%numtracks%" -T "COMMENT=%comment%" %source% -o %dest%
+      ```
   * Add album and artist to generated files:
     * EAC > EAC options > Filename > `%artist%\%albumtitle%\%tracknr2% %title%`
 * [SABnzbd](https://github.com/sabnzbd/sabnzbd/releases/download/4.2.3/SABnzbd-4.2.3-win-setup.exe)
@@ -158,3 +162,8 @@ Alternate option
   * Remove Gallery 
   * Remove One Drive
 * Remove search in start menu - same as Windows 10
+* Power profiles
+  * Interesting take on power plans vs power modes in [Windows 11](https://github.com/microsoft/PowerToys/issues/24858) 
+  * ~~[PowerSwitcher](https://github.com/petrroll/PowerSwitcher/)~~
+    * Open issue [stating it is no longer supported](https://github.com/petrroll/PowerSwitcher/issues/23)
+    * Issue where it [only shows one profile](https://github.com/petrroll/PowerSwitcher/issues/35)
