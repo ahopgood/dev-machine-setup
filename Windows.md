@@ -44,6 +44,9 @@
 * [PlantUML Parse](https://plugins.jetbrains.com/plugin/15524-plantuml-parser)
 * [BashSupport Pro](https://plugins.jetbrains.com/plugin/13841-bashsupport-pro)
 
+### IntelliJ Setup
+* `Settings` > `Editor` > `File Types` > `Recognised File Types` > `YAML` > add `*.sls`
+
 ## General Tools
 * [Yubico Authenticator](https://www.yubico.com/products/yubico-authenticator/#h-download-yubico-authenticator)
 * [Canon TS8300](https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAxMDM3NjA0&cmp=ABX&lang=EN)
