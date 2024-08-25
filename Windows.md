@@ -26,7 +26,7 @@
 * [Postman 7.36.3](https://dl.pstmn.io/download/latest/win64)
 * [Git 2.38.1](https://github.com/git-for-windows/git/releases/download/v2.38.1.windows.1/Git-2.38.1-64-bit.exe)
   * [Git general download](https://git-scm.com/download/win)
-* [Markdown Pad 2](markdownpad2-setup.exe)
+* [Markdown Pad 2](http://markdownpad.com/download.html)
 * [Meld Merge 3.18.2](https://download.gnome.org/binaries/win32/meld/3.18/Meld-3.18.2-win32.msi)
   * [Meld general download](https://meldmerge.org/)
 * [MikTex 2.4](https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/basic-miktex-24.1-x64.exe)
@@ -130,7 +130,7 @@
   regedit /i putty.reg
   ```
 ### /etc/hosts
-See [/etc/hosts](#/etc/hosts) in this project
+See [/etc/hosts](/etc/hosts) in this project
 
 ### Local DNS
 Update your router to use your dnsmasq server IP `192.168.2.5`
@@ -170,3 +170,9 @@ Alternate option
   * ~~[PowerSwitcher](https://github.com/petrroll/PowerSwitcher/)~~
     * Open issue [stating it is no longer supported](https://github.com/petrroll/PowerSwitcher/issues/23)
     * Issue where it [only shows one profile](https://github.com/petrroll/PowerSwitcher/issues/35)
+* Lockscreen - remove annoying clickable windows
+  * Left click start menu
+  * Select settings
+  * Select personalisation
+  * Select Lock Screen
+  * Lock Screen Status - None
