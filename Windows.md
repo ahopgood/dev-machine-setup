@@ -176,3 +176,17 @@ Alternate option
   * Select personalisation
   * Select Lock Screen
   * Lock Screen Status - None
+* Removing recent items from various menus
+  * Disable "Recent Items" in Explorer
+    * Open Explorer
+    * Select the tree dot menu
+    * Select Options
+    * Unselect  `General > Privacy > Show recently used files`
+    * Unselect  `General > Privacy > Show frequently used folder`
+* Disable recent items in the Start Menu's "Recommended" section
+  * Click the windows icon on the taskbar
+  * Right Click -> Settings
+  * Turn off -> `Show recently opened items in Start, Jump lists, and File Explorer`
+### Windows 11 Troubleshooting
+* `This application has been blocked for your protection`
+  *  Unknown fix at this time
