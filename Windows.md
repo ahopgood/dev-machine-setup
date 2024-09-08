@@ -67,6 +67,10 @@
     * [AutoRemovePlus](http://forum.deluge-torrent.org/viewtopic.php?f=9&t=47243)
 * [DS4 Windows](https://ds4-windows.com/download/ryochan7-ds4windows/)
 * [DsHidMini](https://github.com/nefarius/DsHidMini/releases/download/v2.2.282.0/dshidmini_v2.2.282.0.zip)
+  * Once unzipped install the following `.inf` files
+  * `x64/dshidmini/dshidmini.inf`
+  * `x64/dshidmini/igfilter.inf`
+  * Create a shortcut of `DSHMC.exe` on your desktop
 * [Exact Audio Copy 1.6](https://www.exactaudiocopy.de/eac-1.6.exe)
   * Flac output: 
     * EAC > Compression Options > External Compression:
