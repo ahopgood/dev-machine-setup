@@ -19,6 +19,11 @@
 * [Packer 1.9.2](https://releases.hashicorp.com/packer/1.9.2/packer_1.9.2_windows_amd64.zip)
 * [Eclipse Temurin Java 17.0.5](https://adoptium.net/download/)
   * [Temurin archive](https://adoptium.net/temurin/archive/?version=17)
+* [Maven](https://maven.apache.org/download.cgi)
+  * Unzip to program files
+  * Add to PATH environmental variable and restart machine
+  * [Maven wrapper maven](https://maven.apache.org/wrapper/)
+    * Then run `mvn wrapper:wrapper` within your projects
 * [Golang 1.20.5](https://go.dev/dl/go1.20.5.windows-amd64.msi)
   * [Go Downloads](https://go.dev/dl/)
 * [7zip 17.01](https://sourceforge.net/projects/sevenzip/files/7-Zip/17.01/)
@@ -39,6 +44,7 @@
 ### IntelliJ Plugins
 * [Go](https://plugins.jetbrains.com/plugin/9568-go)
 * [Go Template](https://plugins.jetbrains.com/plugin/10581-go-template)
+* [ginkgo](https://plugins.jetbrains.com/plugin/17554-ginkgo)
 * [Makefile language](https://plugins.jetbrains.com/plugin/9333-makefile-language)
 * [Lombok](https://plugins.jetbrains.com/plugin/6317-lombok)
 * [PlantUML Parse](https://plugins.jetbrains.com/plugin/15524-plantuml-parser)
@@ -46,7 +52,8 @@
 
 ### IntelliJ Setup
 * `Settings` > `Editor` > `File Types` > `Recognised File Types` > `YAML` > add `*.sls`
-
+* Switch to cmd.exe (not powershell)
+  * `Settings` > `Tools` > `Terminal` > `Shell path`
 ## General Tools
 * [Yubico Authenticator](https://www.yubico.com/products/yubico-authenticator/#h-download-yubico-authenticator)
 * [Canon TS8300](https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAxMDM3NjA0&cmp=ABX&lang=EN)
