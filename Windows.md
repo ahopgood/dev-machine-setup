@@ -54,6 +54,11 @@
 * `Settings` > `Editor` > `File Types` > `Recognised File Types` > `YAML` > add `*.sls`
 * Switch to cmd.exe (not powershell)
   * `Settings` > `Tools` > `Terminal` > `Shell path`
+#### Salt Stack support
+* There is currently an [open ticket](https://youtrack.jetbrains.com/issue/PY-17334/Please-add-SaltStack-support-as-a-plugin) for Salt Stack support but we can roll it oursevles:
+  * `Settings` -> `Editor` -> `File Types` -> Select `YAML` -> `+` to add the `*.sls` pattern
+  * Install the [Python plugin](https://plugins.jetbrains.com/plugin/631-python)
+  * `Settings` -> `Languages and Frameworks` -> `Python template language` -> `+` to add `YAML` to the template file types -> `Jinja2`
 ## General Tools
 * [Yubico Authenticator](https://www.yubico.com/products/yubico-authenticator/#h-download-yubico-authenticator)
 * [Canon TS8300](https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAxMDM3NjA0&cmp=ABX&lang=EN)
