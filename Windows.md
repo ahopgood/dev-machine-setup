@@ -40,7 +40,8 @@
 * [TruCrypt](https://sourceforge.net/projects/truecrypt/files/TrueCrypt/TrueCrypt-7.2.exe/download)
 * [GraphViz](https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/10.0.1/windows_10_cmake_Release_graphviz-install-10.0.1-win64.exe)
   * [General GraphViz installer page](https://graphviz.org/download/)
-
+* [Dos2Unix](https://github.com/guidoreina/dos2unix)
+  * System -> Advanced System Settings -> Environment Variables -> User Variables -> Path -> Edit -> New -> C:\Program Files\dos2unix-7.5.2-win64\bin
 ### IntelliJ Plugins
 * [Go](https://plugins.jetbrains.com/plugin/9568-go)
 * [Go Template](https://plugins.jetbrains.com/plugin/10581-go-template)
@@ -49,6 +50,7 @@
 * [Lombok](https://plugins.jetbrains.com/plugin/6317-lombok)
 * [PlantUML Parse](https://plugins.jetbrains.com/plugin/15524-plantuml-parser)
 * [BashSupport Pro](https://plugins.jetbrains.com/plugin/13841-bashsupport-pro)
+* [Puppet](https://plugins.jetbrains.com/plugin/7180-puppet)
 
 ### IntelliJ Setup
 * `Settings` > `Editor` > `File Types` > `Recognised File Types` > `YAML` > add `*.sls`
@@ -59,6 +61,7 @@
   * `Settings` -> `Editor` -> `File Types` -> Select `YAML` -> `+` to add the `*.sls` pattern
   * Install the [Python plugin](https://plugins.jetbrains.com/plugin/631-python)
   * `Settings` -> `Languages and Frameworks` -> `Python template language` -> `+` to add `YAML` to the template file types -> `Jinja2`
+
 ## General Tools
 * [Yubico Authenticator](https://www.yubico.com/products/yubico-authenticator/#h-download-yubico-authenticator)
 * [Canon TS8300](https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAxMDM3NjA0&cmp=ABX&lang=EN)
