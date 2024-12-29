@@ -51,6 +51,7 @@
 * [PlantUML Parse](https://plugins.jetbrains.com/plugin/15524-plantuml-parser)
 * [BashSupport Pro](https://plugins.jetbrains.com/plugin/13841-bashsupport-pro)
 * [Puppet](https://plugins.jetbrains.com/plugin/7180-puppet)
+* [Ruby](https://plugins.jetbrains.com/plugin/1293-ruby) - to support editing Vagrantfiles
 
 ### IntelliJ Setup
 * `Settings` > `Editor` > `File Types` > `Recognised File Types` > `YAML` > add `*.sls`
