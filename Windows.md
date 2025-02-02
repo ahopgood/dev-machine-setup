@@ -42,6 +42,8 @@
   * [General GraphViz installer page](https://graphviz.org/download/)
 * [Dos2Unix](https://github.com/guidoreina/dos2unix)
   * System -> Advanced System Settings -> Environment Variables -> User Variables -> Path -> Edit -> New -> C:\Program Files\dos2unix-7.5.2-win64\bin
+* [Tilt](https://docs.tilt.dev/install.html)
+
 ### IntelliJ Plugins
 * [Go](https://plugins.jetbrains.com/plugin/9568-go)
 * [Go Template](https://plugins.jetbrains.com/plugin/10581-go-template)
@@ -52,6 +54,7 @@
 * [BashSupport Pro](https://plugins.jetbrains.com/plugin/13841-bashsupport-pro)
 * [Puppet](https://plugins.jetbrains.com/plugin/7180-puppet)
 * [Ruby](https://plugins.jetbrains.com/plugin/1293-ruby) - to support editing Vagrantfiles
+* [Toml](https://plugins.jetbrains.com/plugin/8195-toml)
 
 ### IntelliJ Setup
 * `Settings` > `Editor` > `File Types` > `Recognised File Types` > `YAML` > add `*.sls`
@@ -62,6 +65,11 @@
   * `Settings` -> `Editor` -> `File Types` -> Select `YAML` -> `+` to add the `*.sls` pattern
   * Install the [Python plugin](https://plugins.jetbrains.com/plugin/631-python)
   * `Settings` -> `Languages and Frameworks` -> `Python template language` -> `+` to add `YAML` to the template file types -> `Jinja2`
+#### Tilt Support
+* [Editor support](https://docs.tilt.dev/editor.html)
+  * IntelliJ / Goland support is via [TextMate bundles](https://www.jetbrains.com/help/idea/textmate-bundles.html)
+  * Clone [https://github.com/tilt-dev/tiltfile.tmbundle](https://github.com/tilt-dev/tiltfile.tmbundle)
+  * `Settings/Preferences` > `Editor` > `TextMate Bundles` > `+` > point to the above checked out repository
 
 ## General Tools
 * [Yubico Authenticator](https://www.yubico.com/products/yubico-authenticator/#h-download-yubico-authenticator)
