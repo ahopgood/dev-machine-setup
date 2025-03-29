@@ -61,7 +61,8 @@
 * Switch to cmd.exe (not powershell)
   * `Settings` > `Tools` > `Terminal` > `Shell path`
 #### Salt Stack support
-* There is currently an [open ticket](https://youtrack.jetbrains.com/issue/PY-17334/Please-add-SaltStack-support-as-a-plugin) for Salt Stack support but we can roll it oursevles:
+* * `Settings` -> `Editor` -> `File Types` -> Select `jJinja2 template` -> `+` to add the `*.sls` pattern
+* ~~There is currently an [open ticket](https://youtrack.jetbrains.com/issue/PY-17334/Please-add-SaltStack-support-as-a-plugin) for Salt Stack support but we can roll it oursevles:~~
   * `Settings` -> `Editor` -> `File Types` -> Select `YAML` -> `+` to add the `*.sls` pattern
   * Install the [Python plugin](https://plugins.jetbrains.com/plugin/631-python)
   * `Settings` -> `Languages and Frameworks` -> `Python template language` -> `+` to add `YAML` to the template file types -> `Jinja2`
