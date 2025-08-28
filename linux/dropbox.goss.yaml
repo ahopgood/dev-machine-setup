@@ -1,0 +1,42 @@
+package:
+  dropbox:
+    installed: true
+    versions:
+      - 2025.05.20
+command:
+  ls -l /etc/apt/keyrings:
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: dropbox.asc
+    stderr: ""
+    timeout: 10000
+  dropbox exclude list:
+    exit-status: 0
+    stdout:
+      - 'Excluded:'
+      - ../../../Dropbox/Alex's Ebooks
+      - ../../../Dropbox/Attest
+      - ../../../Dropbox/Backups
+      - ../../../Dropbox/Camera Uploads
+      - ../../../Dropbox/Coursera
+      - ../../../Dropbox/Installers
+      - ../../../Dropbox/Misc
+      - ../../../Dropbox/Nicks Graduation Photos
+      - ../../../Dropbox/Order Confs
+      - ../../../Dropbox/PRANCK
+      - ../../../Dropbox/Parental Scans
+      - ../../../Dropbox/Personal & Confidential
+      - ../../../Dropbox/Photos
+      - ../../../Dropbox/Podcasts
+      - ../../../Dropbox/Podcasts - Starling
+      - ../../../Dropbox/Projects
+      - ../../../Dropbox/Public
+      - ../../../Dropbox/Scans
+      - ../../../Dropbox/Screenshots
+      - ../../../Dropbox/Sent files
+      - ../../../Dropbox/Whatsapp
+      - ../../../Dropbox/Work
+      - ../../../Dropbox/dilbert
+    stderr: ""
+    timeout: 10000

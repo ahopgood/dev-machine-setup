@@ -1,0 +1,38 @@
+file:
+  /home/alexander/.bash_profile:
+    title: Intellij Idea exists on PATH
+    exists: true
+    mode: "0664"
+    owner: alexander
+    group: alexander
+    filetype: file
+    contents:
+      and:
+        - contain-substring: /opt/idea-IU-232.10335.12/bin/
+  /home/alexander/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox:
+    title: Check that the chrome-sandbox has root permissions
+    meta:
+      desc: Otherwise the IDE will fail to start for certain projects
+    exists: true
+    mode: "4755"
+    owner: root
+    group: root
+    filetype: file
+    contents: [ ]
+  /opt/idea-IU-232.10335.12:
+    title: Check the correct version of Intellij Idea has been installed
+    exists: true
+    mode: "0755"
+    owner: root
+    group: root
+    filetype: directory
+    contents: [ ]
+command:
+  ls -l ~/.local/share/applications/:
+    title: Check that we have a pinned desktop entry
+    exit-status: 0
+    stdout:
+      and:
+         - contain-substring: jetbrains-idea.desktop
+    stderr: ""
+    timeout: 10000

@@ -1,0 +1,38 @@
+package:
+  containerd.io:
+    installed: true
+    versions:
+      - 1.7.27-1
+  docker-buildx-plugin:
+    installed: true
+    versions:
+      - 0.26.1-1~ubuntu.24.04~noble
+  docker-ce:
+    installed: true
+    versions:
+      - 5:28.3.3-1~ubuntu.24.04~noble
+  docker-ce-cli:
+    installed: true
+    versions:
+      - 5:28.3.3-1~ubuntu.24.04~noble
+  docker-compose-plugin:
+    installed: true
+    versions:
+      - 2.39.1-1~ubuntu.24.04~noble
+user:
+  alexander:
+    exists: true
+    groups:
+      and:
+       - contain-element: docker
+group:
+  docker:
+    exists: true
+    gid: 984
+
+command:
+  ls -l /etc/apt/keyrings | grep docker.asc:
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: docker.asc

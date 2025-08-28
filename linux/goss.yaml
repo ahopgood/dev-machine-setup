@@ -89,5 +89,8 @@ command:
             - yq              4.47.1      ~/.config/mise/config.toml  4.47.1
         stderr: ""
         timeout: 10000
-
+gossfile:
+    docker.goss.yaml: {}
+    dropbox.goss.yaml: {}
+    idea.goss.yaml: {}
 
