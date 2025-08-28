@@ -7,6 +7,14 @@ package:
         installed: true
         versions:
             - 1.61.0-beta0
+    ca-certificates:
+        installed: true
+        versions:
+            - "20240203"
+    curl:
+        installed: true
+        versions:
+            - 8.5.0-2ubuntu10.6
     ddcutil:
         installed: true
         versions:
@@ -23,10 +31,6 @@ package:
         installed: true
         versions:
             - 2.42.2-9ubuntu0.1
-    mise:
-        installed: true
-        versions:
-            - 2025.8.16
     winehq-stable:
         installed: true
         versions:
@@ -49,6 +53,13 @@ user:
         home: /home/alexander
         shell: /bin/bash
 command:
+    git config --list --global:
+        exit-status: 0
+        stdout:
+            - user.email=alex.hopgood@gmail.com
+            - user.name=ahopgood
+        stderr: ""
+        timeout: 10000
     gnome-extensions list:
         exit-status: 0
         stdout:
@@ -57,40 +68,23 @@ command:
         stderr: ""
         timeout: 10000
     ls -l /etc/apt/keyrings | grep winehq-archive.key:
+        title: Check repository keyring is present
         exit-status: 0
         stdout:
-            - -rw-r--r-- 1 root root 2313 Aug 24 13:51 winehq-archive.key
+            and:
+                - contain-substring: winehq-archive.key
         stderr: []
         timeout: 10000
-    ls -l /etc/apt/keyrings | grep mise-archive-keyring.gpg:
+    ls -l /etc/apt/sources.list.d/ | grep winehq:
+        title: Check apt repository is present
         exit-status: 0
         stdout:
-            - -rw-r--r-- 1 root root 2268 Aug 22 07:47 mise-archive-keyring.gpg
-        stderr: []
-        timeout: 10000
-    mise ls -g:
-        exit-status: 0
-        stdout:
-            - bat-extras      2024.08.24  ~/.config/mise/config.toml  2024.08.24
-            - bats            1.12.0      ~/.config/mise/config.toml  1.12.0
-            - dive            0.13.1      ~/.config/mise/config.toml  latest
-            - docker-cli      28.3.3      ~/.config/mise/config.toml  28.3.3
-            - docker-compose  2.39.2      ~/.config/mise/config.toml  2.39.2
-            - go              1.25.0      ~/.config/mise/config.toml  1.25.0
-            - goss            0.4.9       ~/.config/mise/config.toml  0.4.9
-            - grype           0.98.0      ~/.config/mise/config.toml  0.98.0
-            - java            21.0.2      ~/.config/mise/config.toml  21
-            - jq              1.8.1       ~/.config/mise/config.toml  1.8.1
-            - maven           3.9.11      ~/.config/mise/config.toml  3.9.11
-            - packer          1.14.1      ~/.config/mise/config.toml  1.14.1
-            - pandoc          3.7.0.2     ~/.config/mise/config.toml  3.7.0.2
-            - syft            1.31.0      ~/.config/mise/config.toml  1.31.0
-            - tilt            0.35.0      ~/.config/mise/config.toml  0.35.0
-            - yq              4.47.1      ~/.config/mise/config.toml  4.47.1
+            and:
+                - contain-substring: winehq-noble.sources
         stderr: ""
         timeout: 10000
 gossfile:
     docker.goss.yaml: {}
     dropbox.goss.yaml: {}
     idea.goss.yaml: {}
-
+    mise.goss.yaml: {}

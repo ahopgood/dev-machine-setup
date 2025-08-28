@@ -1,42 +1,51 @@
 package:
-  dropbox:
-    installed: true
-    versions:
-      - 2025.05.20
+    dropbox:
+        installed: true
+        versions:
+            - 2025.05.20
 command:
-  ls -l /etc/apt/keyrings:
-    exit-status: 0
-    stdout:
-      and:
-        - contain-substring: dropbox.asc
-    stderr: ""
-    timeout: 10000
-  dropbox exclude list:
-    exit-status: 0
-    stdout:
-      - 'Excluded:'
-      - ../../../Dropbox/Alex's Ebooks
-      - ../../../Dropbox/Attest
-      - ../../../Dropbox/Backups
-      - ../../../Dropbox/Camera Uploads
-      - ../../../Dropbox/Coursera
-      - ../../../Dropbox/Installers
-      - ../../../Dropbox/Misc
-      - ../../../Dropbox/Nicks Graduation Photos
-      - ../../../Dropbox/Order Confs
-      - ../../../Dropbox/PRANCK
-      - ../../../Dropbox/Parental Scans
-      - ../../../Dropbox/Personal & Confidential
-      - ../../../Dropbox/Photos
-      - ../../../Dropbox/Podcasts
-      - ../../../Dropbox/Podcasts - Starling
-      - ../../../Dropbox/Projects
-      - ../../../Dropbox/Public
-      - ../../../Dropbox/Scans
-      - ../../../Dropbox/Screenshots
-      - ../../../Dropbox/Sent files
-      - ../../../Dropbox/Whatsapp
-      - ../../../Dropbox/Work
-      - ../../../Dropbox/dilbert
-    stderr: ""
-    timeout: 10000
+    dropbox exclude list:
+        exit-status: 0
+        stdout:
+            - 'Excluded:'
+            - ../../../Dropbox/Alex's Ebooks
+            - ../../../Dropbox/Attest
+            - ../../../Dropbox/Backups
+            - ../../../Dropbox/Camera Uploads
+            - ../../../Dropbox/Coursera
+            - ../../../Dropbox/Installers
+            - ../../../Dropbox/Misc
+            - ../../../Dropbox/Nicks Graduation Photos
+            - ../../../Dropbox/Order Confs
+            - ../../../Dropbox/PRANCK
+            - ../../../Dropbox/Parental Scans
+            - ../../../Dropbox/Personal & Confidential
+            - ../../../Dropbox/Photos
+            - ../../../Dropbox/Podcasts
+            - ../../../Dropbox/Podcasts - Starling
+            - ../../../Dropbox/Projects
+            - ../../../Dropbox/Public
+            - ../../../Dropbox/Scans
+            - ../../../Dropbox/Screenshots
+            - ../../../Dropbox/Sent files
+            - ../../../Dropbox/Whatsapp
+            - ../../../Dropbox/Work
+            - ../../../Dropbox/dilbert
+        stderr: ""
+        timeout: 10000
+    ls -l /etc/apt/keyrings | grep dropbox.asc:
+        title: Check repository keyring is present
+        exit-status: 0
+        stdout:
+            and:
+                - contain-substring: dropbox.asc
+        stderr: ""
+        timeout: 10000
+    ls -l /etc/apt/sources.list.d/ | grep dropbox:
+        title: Check apt repository is present
+        exit-status: 0
+        stdout:
+            and:
+                - contain-substring: dropbox.list
+        stderr: ""
+        timeout: 10000

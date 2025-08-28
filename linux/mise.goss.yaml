@@ -1,0 +1,43 @@
+package:
+  mise:
+    installed: true
+    versions:
+      - 2025.8.16
+command:
+  ls -l /etc/apt/keyrings | grep mise-archive-keyring.gpg:
+    title: Check repository keyring is present
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: mise-archive-keyring.gpg
+    stderr: [ ]
+    timeout: 10000
+  ls -l /etc/apt/sources.list.d/ | grep mise:
+    title: Check apt repository is present
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: mise.list
+    stderr: ""
+    timeout: 10000
+  mise ls -g:
+    exit-status: 0
+    stdout:
+      - bat-extras      2024.08.24  ~/.config/mise/config.toml  2024.08.24
+      - bats            1.12.0      ~/.config/mise/config.toml  1.12.0
+      - dive            0.13.1      ~/.config/mise/config.toml  0.13.1
+      - docker-cli      28.3.3      ~/.config/mise/config.toml  28.3.3
+      - docker-compose  2.39.2      ~/.config/mise/config.toml  2.39.2
+      - go              1.25.0      ~/.config/mise/config.toml  1.25.0
+      - goss            0.4.9       ~/.config/mise/config.toml  0.4.9
+      - grype           0.98.0      ~/.config/mise/config.toml  0.98.0
+      - java            21.0.2      ~/.config/mise/config.toml  21
+      - jq              1.8.1       ~/.config/mise/config.toml  1.8.1
+      - maven           3.9.11      ~/.config/mise/config.toml  3.9.11
+      - packer          1.14.1      ~/.config/mise/config.toml  1.14.1
+      - pandoc          3.7.0.2     ~/.config/mise/config.toml  3.7.0.2
+      - syft            1.31.0      ~/.config/mise/config.toml  1.31.0
+      - tilt            0.35.0      ~/.config/mise/config.toml  0.35.0
+      - yq              4.47.1      ~/.config/mise/config.toml  4.47.1
+    stderr: ""
+    timeout: 10000

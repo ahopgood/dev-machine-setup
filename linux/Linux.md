@@ -11,25 +11,25 @@ echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=amd64] http
 sudo apt update
 sudo apt install -y mise
 ```
-* `mise use bats`
-* `mise use bats-extra`
-* `mise use dive`
-* `mise use docker-cli`
-* `mise use docker-compose`
-* `mise use go`
-* `mise use goss`
-* `mise use grype`
-* `mise use java@21`
-* `mise use jq`
-* `mise use maven`
-* `mise use packer`
-* `mise use pandoc`
-* `mise use syft`
-* `mise use tilt`
-* `mise use yq`
+* `mise use -g bats`
+* `mise use -g bats-extra`
+* `mise use -g dive`
+* `mise use -g docker-cli`
+* `mise use -g docker-compose`
+* `mise use -g go`
+* `mise use -g goss`
+* `mise use -g grype`
+* `mise use -g java@21`
+* `mise use -g jq`
+* `mise use -g maven`
+* `mise use -g packer`
+* `mise use -g pandoc`
+* `mise use -g syft`
+* `mise use -g tilt`
+* `mise use -g yq`
 
 
-* `mise use make` - issue
+* `mise use -g make` - issue
 
 ## Apt installations
 ```
@@ -49,7 +49,7 @@ sudo gpasswd --add $USER i2c
 gnome-extensions install ./display-brightness-ddcutilthemightydeity.github.com.v55.shell-extension.zip
 ```
 ### git configuration
-```agsl
+```
 git config --global --add user.name ahopgood
 git config --global --add user.email alex.hopgood@gmail.com
 ```
