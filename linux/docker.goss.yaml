@@ -19,12 +19,7 @@ package:
         installed: true
         versions:
             - 2.39.1-1~ubuntu.24.04~noble
-user:
-    alexander:
-        exists: true
-        groups:
-            and:
-                - contain-element: docker
+
 group:
     docker:
         exists: true
@@ -44,5 +39,12 @@ command:
         stdout:
             and:
               - contain-substring: docker.list
+        stderr: ""
+        timeout: 10000
+    groups alexander | grep docker:
+        title: Check user is part of the docker group to allow non-sudo access to docker-cli
+        exit-status: 0
+        stdout:
+            - 'alexander : alexander adm cdrom sudo dip plugdev users lpadmin docker i2c'
         stderr: ""
         timeout: 10000

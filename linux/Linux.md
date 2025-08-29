@@ -35,12 +35,13 @@ sudo apt install -y mise
 ```
 sudo apt install -y dos2unix git graphviz 7zip ddcutil
 ```
-### Monitor Control
+### Monitor Control via ddcutil
+* [ddcutil](https://www.ddcutil.com/)
 ```
 sudo apt install -y ddcutil gnome-shell-extension-prefs chrome-gnome-shell
 sudo gpasswd --add $USER i2c
 ```
-* * Github page [https://github.com/daitj/gnome-display-brightness-ddcutil](https://github.com/daitj/gnome-display-brightness-ddcutil)
+* Github page [https://github.com/daitj/gnome-display-brightness-ddcutil](https://github.com/daitj/gnome-display-brightness-ddcutil)
 * Goto [https://extensions.gnome.org/extension/2645/brightness-control-using-ddcutil/](https://extensions.gnome.org/extension/2645/brightness-control-using-ddcutil/) to install the extension via the web.
   * Select shell version 48
   * Select extension version 55
@@ -109,7 +110,6 @@ sudo dpkg -i dropbox_2025.05.20_amd64.deb
   dropbox exclude add Installers/
   dropbox exclude add Misc/
   dropbox exclude add Nicks\ Graduation\ Photos/
-  dropbox exclude add Notes/
   dropbox exclude add Order\ Confs/
   dropbox exclude add PRANCK/
   dropbox exclude add Parental\ Scans/

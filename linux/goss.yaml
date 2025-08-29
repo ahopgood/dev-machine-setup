@@ -15,10 +15,6 @@ package:
         installed: true
         versions:
             - 8.5.0-2ubuntu10.6
-    ddcutil:
-        installed: true
-        versions:
-            - 1.4.1-1build2
     dos2unix:
         installed: true
         versions:
@@ -31,10 +27,6 @@ package:
         installed: true
         versions:
             - 2.42.2-9ubuntu0.1
-    winehq-stable:
-        installed: true
-        versions:
-            - 10.0.0.0~noble-1
 user:
     alexander:
         exists: true
@@ -60,31 +52,10 @@ command:
             - user.name=ahopgood
         stderr: ""
         timeout: 10000
-    gnome-extensions list:
-        exit-status: 0
-        stdout:
-            and:
-                - contain-substring: display-brightness-ddcutil@themightydeity.github.com
-        stderr: ""
-        timeout: 10000
-    ls -l /etc/apt/keyrings | grep winehq-archive.key:
-        title: Check repository keyring is present
-        exit-status: 0
-        stdout:
-            and:
-                - contain-substring: winehq-archive.key
-        stderr: []
-        timeout: 10000
-    ls -l /etc/apt/sources.list.d/ | grep winehq:
-        title: Check apt repository is present
-        exit-status: 0
-        stdout:
-            and:
-                - contain-substring: winehq-noble.sources
-        stderr: ""
-        timeout: 10000
 gossfile:
+    ddcutil.goss.yaml: {}
     docker.goss.yaml: {}
     dropbox.goss.yaml: {}
     idea.goss.yaml: {}
     mise.goss.yaml: {}
+    wine.goss.yaml: {}

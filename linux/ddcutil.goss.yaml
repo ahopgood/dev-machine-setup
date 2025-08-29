@@ -1,0 +1,29 @@
+package:
+  ddcutil:
+    installed: true
+    versions:
+      - 1.4.1-1build2
+  gnome-shell-extension-prefs:
+    installed: true
+    versions:
+      - 46.0-0ubuntu6~24.04.9
+  chrome-gnome-shell:
+    installed: true
+    versions:
+      - 42.1-4
+command:
+  gnome-extensions list:
+    title: Check gnome extension exists for display brightness ui
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: display-brightness-ddcutil@themightydeity.github.com
+    stderr: ""
+    timeout: 10000
+  groups alexander | grep i2c:
+    title: Check user alexander is part of the i2c group
+    exit-status: 0
+    stdout:
+      - 'alexander : alexander adm cdrom sudo dip plugdev users lpadmin docker i2c'
+    stderr: ""
+    timeout: 10000

@@ -1,0 +1,22 @@
+package:
+  winehq-stable:
+    installed: true
+    versions:
+      - 10.0.0.0~noble-1
+command:
+  ls -l /etc/apt/keyrings | grep winehq-archive.key:
+    title: Check repository keyring is present
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: winehq-archive.key
+    stderr: [ ]
+    timeout: 10000
+  ls -l /etc/apt/sources.list.d/ | grep winehq:
+    title: Check apt repository is present
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: winehq-noble.sources
+    stderr: ""
+    timeout: 10000
