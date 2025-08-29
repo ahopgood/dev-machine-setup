@@ -21,3 +21,19 @@ command:
       - virtualbox.list
     stderr: ""
     timeout: 10000
+  VBoxManage list extpacks:
+    title: Check extension pack is installed
+    exit-status: 0
+    stdout:
+      - 'Extension Packs: 1'
+      - 'Pack no. 0:   Oracle VM VirtualBox Extension Pack'
+      - 'Version:        7.0.26'
+      - 'Revision:       168464'
+      - 'Edition:'
+      - 'Description:    Oracle Cloud Infrastructure integration, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe, full VM encryption.'
+      - 'VRDE Module:    VBoxVRDP'
+      - 'Crypto Module:  VBoxPuelCrypto'
+      - 'Usable:         true'
+      - 'Why unusable:'
+    stderr: ""
+    timeout: 10000
