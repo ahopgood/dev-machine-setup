@@ -79,6 +79,19 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 * `newgrp docker` to activate changes
 * Now we can access the `docker` command without needing `sudo`
 
+### Virtualbox
+* Setup repository and keys
+```
+sudo wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmor --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+```
+* Install
+```agsl
+sudo apt-get update
+sudo apt-get install virtualbox=7.0
+```
+* Install additi
+
 ### [WINE](https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu)
 ```
 sudo dpkg --add-architecture i386
@@ -144,7 +157,8 @@ sudo dpkg -i atom-amd64.deb
       ```
       ~/.wine/drive_c/Program\ Files/KeePass\ Password\ Safe\ 2/Plugins/
       ```
-* [Jetbrains Intellij IDEA Ultimate](https://www.jetbrains.com/shop/download/II/2023200)
+### Intellij Idea
+[Jetbrains Intellij IDEA Ultimate](https://www.jetbrains.com/shop/download/II/2023200)
     * Version 2023.2.8 is the fallback license version
     * [Install guide](https://www.jetbrains.com/help/idea/installation-guide.html#standalone_linux)
   ```
@@ -169,6 +183,49 @@ sudo dpkg -i atom-amd64.deb
       sudo chown root:root ~/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox 
       sudo chmod 4755 ~/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox 
       ```
+* IntelliJ plugins
+  * [https://www.jetbrains.com/help/idea/managing-plugins.html#install_plugin_cmd](https://www.jetbrains.com/help/idea/managing-plugins.html#install_plugin_cmd)
+  * Plugins are installed at `ls -l ~/.local/share/JetBrains/IntelliJIdea2023.2/`
+  * ```
+    idea.sh installPlugins org.jetbrains.plugins.go
+    idea.sh installPlugins org.jetbrains.plugins.go-template
+    idea.sh installPlugins pro.bashsupport
+    idea.sh installPlugins com.github.intellij.ginkgo
+    idea.sh installPlugins name.kropp.intellij.makefile
+    idea.sh installPlugins com.github.l34130.mise
+    idea.sh installPlugins PlantUML integration
+    idea.sh installPlugins plantuml-parser
+    idea.sh installPlugins com.intellij.lang.puppet
+    idea.sh installPlugins Pythonid
+    idea.sh installPlugins org.jetbrains.plugins.ruby
+    idea.sh installPlugins org.intellij.plugins.hcl
+    ```
+    * It will look like there are issues with go, ginkgo, mise, plantuml-parser, puppet, hcl but they all install fine
+  * [Go](https://plugins.jetbrains.com/plugin/9568-go)
+    * `org.jetbrains.plugins.go`
+  * [go template](https://plugins.jetbrains.com/plugin/10581-go-template)
+    * `org.jetbrains.plugins.go-template`
+  * [Bash support pro](https://plugins.jetbrains.com/plugin/13841-bashsupport-pro)
+    * `pro.bashsupport`
+  * [Ginkgo](https://plugins.jetbrains.com/plugin/17554-ginkgo)
+    * `com.github.intellij.ginkgo`
+  * [Makefile](https://plugins.jetbrains.com/plugin/9333-makefile-language)
+    * `name.kropp.intellij.makefile`
+  * [mise](https://plugins.jetbrains.com/plugin/24904-mise)
+    * `com.github.l34130.mise`
+  * [plantuml](https://plugins.jetbrains.com/plugin/7017-plantuml4idea)
+    * `PlantUML integration`
+  * [Plantuml parser](https://plugins.jetbrains.com/plugin/15524-plantuml-parser)
+    * `plantuml-parser`
+  * [puppet](https://plugins.jetbrains.com/plugin/7180-puppet)
+    * `com.intellij.lang.puppet`
+  * [python](https://plugins.jetbrains.com/plugin/631-python)
+    * `Pythonid`
+  * [ruby](https://plugins.jetbrains.com/plugin/1293-ruby)
+    * `org.jetbrains.plugins.ruby`
+  * [terraform and hcl](https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl)
+    * `org.intellij.plugins.hcl`
+
 ### OS changes
 * `ctrl + alt` move between desktops
 * `windows key + direction arrow` will snap panels to right, left, up, down etc

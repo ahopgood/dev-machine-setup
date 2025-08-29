@@ -1,0 +1,23 @@
+virtualbox-7.0:
+  installed: true
+  versions:
+    - 7.0.26-168464~Ubuntu~noble
+group:
+  vboxusers:
+    exists: true
+    gid: 125
+command:
+  ls -1 /usr/share/keyrings/ | grep virtualbox:
+    title: Check keyring has been installed
+    exit-status: 0
+    stdout:
+      - oracle-virtualbox-2016.gpg
+    stderr: ""
+    timeout: 10000
+  ls -1 /etc/apt/sources.list.d/ | grep virtualbox:
+    title: Check repository has been installed
+    exit-status: 0
+    stdout:
+      - virtualbox.list
+    stderr: ""
+    timeout: 10000

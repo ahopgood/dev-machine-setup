@@ -36,3 +36,21 @@ command:
          - contain-substring: jetbrains-idea.desktop
     stderr: ""
     timeout: 10000
+
+  ls -1 ~/.local/share/JetBrains/IntelliJIdea2023.2/:
+    title: Check Idea plugins are installed
+    exit-status: 0
+    stdout:
+      - bashsupport-pro
+      - go-plugin
+      - go-template
+      - Intellij-Ginkgo
+      - makefile
+      - mise
+      - plantuml-parser
+      - puppet
+      - python
+      - ruby
+      - terraform
+    stderr: ""
+    timeout: 10000

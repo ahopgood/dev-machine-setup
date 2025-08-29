@@ -27,6 +27,7 @@ package:
         installed: true
         versions:
             - 2.42.2-9ubuntu0.1
+
 user:
     alexander:
         exists: true
@@ -58,4 +59,5 @@ gossfile:
     dropbox.goss.yaml: {}
     idea.goss.yaml: {}
     mise.goss.yaml: {}
+    virtualbox.goss.yaml: {}
     wine.goss.yaml: {}
