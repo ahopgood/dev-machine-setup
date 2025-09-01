@@ -27,6 +27,7 @@ package:
         installed: true
         versions:
             - 2.42.2-9ubuntu0.1
+
 user:
     alexander:
         exists: true
@@ -56,6 +57,7 @@ gossfile:
     ddcutil.goss.yaml: {}
     docker.goss.yaml: {}
     dropbox.goss.yaml: {}
+    hashicorp.goss.yaml: {}
     idea.goss.yaml: {}
     mise.goss.yaml: {}
     virtualbox.goss.yaml: {}

@@ -97,16 +97,17 @@ VBoxManage extpack install --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8
 ```
 Get the error `VBoxManage: error: Too many extension pack names given to "extpack uninstall"` due to trailing space, really Oracle, really!
 
-
-
-
 ### Hashicorp tools
 ```
 sudo wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 ```
-* Vagrant `sudo apt update && sudo apt install vagrant=2.4.1` - version not found
-* Package `sudo apt-get update && sudo apt-get install packer=1.9.2` - version not found
+* Install packages
+```
+sudo apt-get update && 
+  sudo apt-get install packer=1.9.2-1 &&
+  sudo apt install vagrant=2.4.1-1
+```
 
 ### [WINE](https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu)
 ```

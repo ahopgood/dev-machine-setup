@@ -1,0 +1,24 @@
+package:
+  packer:
+    installed: true
+    versions:
+      - 1.9.2-1
+  vagrant:
+    installed: true
+    versions:
+      - 2.4.1-1
+command:
+  ls -1 /etc/apt/sources.list.d/ | grep hashicorp:
+    title: Check hashicorp repository is installed
+    exit-status: 0
+    stdout:
+      - hashicorp.list
+    stderr: ""
+    timeout: 10000
+  ls -1 /usr/share/keyrings/ | grep hashicorp:
+    title: Check hashicorp key is installed
+    exit-status: 0
+    stdout:
+      - hashicorp-archive-keyring.gpg
+    stderr: ""
+    timeout: 10000
