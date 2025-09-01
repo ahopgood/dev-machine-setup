@@ -19,15 +19,22 @@ package:
         installed: true
         versions:
             - 7.5.1-1
+    flatpak:
+        installed: true
+        versions:
+            - 1.14.6-1ubuntu0.1
     git:
         installed: true
         versions:
             - 1:2.43.0-1ubuntu7.3
+    gnome-software-plugin-flatpak:
+        installed: true
+        versions:
+            - 46.0-1ubuntu2
     graphviz:
         installed: true
         versions:
             - 2.42.2-9ubuntu0.1
-
 user:
     alexander:
         exists: true
@@ -46,6 +53,18 @@ user:
         home: /home/alexander
         shell: /bin/bash
 command:
+    flatpak list --app | grep fr.handbrake.ghb:
+        exit-status: 0
+        stdout:
+            - "HandBrake\tfr.handbrake.ghb\t1.10.1\tstable\tsystem"
+        stderr: ""
+        timeout: 10000
+    flatpak remotes | grep flathub:
+        exit-status: 0
+        stdout:
+            - "flathub\tsystem"
+        stderr: ""
+        timeout: 10000
     git config --list --global:
         exit-status: 0
         stdout:
@@ -59,6 +78,7 @@ gossfile:
     dropbox.goss.yaml: {}
     hashicorp.goss.yaml: {}
     idea.goss.yaml: {}
+    media.goss.yaml: {}
     mise.goss.yaml: {}
     virtualbox.goss.yaml: {}
     wine.goss.yaml: {}

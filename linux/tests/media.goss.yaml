@@ -1,0 +1,58 @@
+package:
+  libdvdcss2:
+    installed: true
+    versions:
+      - 1.4.3-1~local
+  vlc:
+    installed: true
+    versions:
+      - 3.0.20-3build6
+  bruno:
+    installed: true
+    versions:
+      - 2.10.0
+  meld:
+    installed: true
+    versions:
+      - 3.22.2-1
+  puddletag:
+    installed: true
+    versions:
+      - 2.2.0-3
+  sabnzbdplus:
+    installed: true
+    versions:
+      - 4.5.3-0ubuntu1~jcfp1~24.04
+command:
+  flatpak info fr.handbrake.ghb:
+    title: verify flatpak install of handbrake
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: 'ID: fr.handbrake.ghb'
+        - contain-substring:  'Version: 1.10.1'
+    stderr: ""
+    timeout: 10000
+  ls -l /etc/apt/keyrings | grep bruno.gpg:
+    title: Check repository keyring is present
+    exit-status: 0
+    stdout:
+      and:
+       - contain-substring: bruno.gpg
+    stderr: ""
+    timeout: 10000
+  ls -l /etc/apt/sources.list.d/ | grep bruno:
+    title: Check apt repository is present
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: bruno.list
+    stderr: ""
+    timeout: 10000
+  ls -1 /etc/apt/sources.list.d/ | grep jcfp-ubuntu-nobetas-noble.sources:
+    title: Check apt repository is present for sabnzbdplus
+    exit-status: 0
+    stdout:
+      - jcfp-ubuntu-nobetas-noble.sources
+    stderr: ""
+    timeout: 10000

@@ -31,6 +31,17 @@ sudo apt install -y mise
 
 * `mise use -g make` - issue
 
+## Flatpak
+* Required for some app installs like vlc and handbrake
+* [Flatpak](https://flatpak.org/)
+```
+sudo apt install flatpak
+```
+* Some packages are published to flathub
+* [Flathub](https://flathub.org/)
+* `sudo apt install gnome-software-plugin-flatpak`
+* `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo`
+
 ## Apt installations
 ```
 sudo apt install -y dos2unix git graphviz 7zip ddcutil
@@ -256,4 +267,49 @@ To fix:
 * `ctrl + end` to jump to the end of a line
 * `alt + arrow` to move word by word
 * `ctrl + arrow` to move word by word
-### Media
+
+## Media
+#### VLC
+* [VLC](https://www.videolan.org/vlc/download-ubuntu.html)
+* `sudo apt-get install vlc libdvdcss2`
+* Configure `sudo dpkg-reconfigure libdvd-pkg`
+* Optional suggested packages:
+```
+libdvdcss2 lirc vlc-plugin-fluidsynth vlc-plugin-jack vlc-plugin-pipewire vlc-plugin-svg
+```
+#### Handbrake
+* [Handbrake](https://handbrake.fr/docs/en/latest/developer/install-dependencies-ubuntu.html)
+```
+sudo flatpak update && flatpak install fr.handbrake.ghb
+```
+#### Bruno
+* https://www.usebruno.com/downloads
+```
+sudo mkdir -p /etc/apt/keyrings
+sudo apt update && sudo apt install gpg
+sudo gpg --list-keys
+sudo gpg --no-default-keyring --keyring /etc/apt/keyrings/bruno.gpg --keyserver keyserver.ubuntu.com --recv-keys 9FA6017ECABE0266
+
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.usebruno.com/ bruno stable" | sudo tee /etc/apt/sources.list.d/bruno.list
+
+sudo apt update && sudo apt install bruno
+```
+* `gpg: can't connect to the dirmngr: No such file or directory` need to run gpg --list-keys first
+##### Meld
+* [Meld](https://gnome.pages.gitlab.gnome.org/meld/)
+```
+sudo apt install meld
+```
+#### PuddleTag
+* [PuddleTag](https://docs.puddletag.net/download.html)
+* MP3 tag editing
+```
+sudo apt install puddletag
+```
+#### sabnzbd
+* [sabnzbd](https://sabnzbd.org/wiki/installation/install-unix)
+```
+sudo add-apt-repository ppa:jcfp/nobetas
+sudo apt-get update && sudo apt-get dist-upgrade
+sudo apt-get install sabnzbdplus
+```
