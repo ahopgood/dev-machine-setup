@@ -313,3 +313,16 @@ sudo add-apt-repository ppa:jcfp/nobetas
 sudo apt-get update && sudo apt-get dist-upgrade
 sudo apt-get install sabnzbdplus
 ```
+#### Truecrypt / Veracrypt
+* https://launchpad.net/~stefansundin/+archive/ubuntu/truecrypt
+* [Veracrypt - alternative](https://veracrypt.io/en/Downloads.html) to truecrypt
+* [Last version of veracrypt to support truecrypt formats](https://veracrypt.io/en/Downloads_1.25.9.html)
+```
+sudo apt-get install libfuse2t64 libwxgtk3.2-1t64 libwxbase3.2-1t64 
+sudo dpkg -i veracrypt-1.25.9-Ubuntu-23.04-amd64.deb 
+```
+#### Discord
+* [Discord](https://discord.com/download)
+```
+sudo dpkg -i discord-0.0.108.deb
+```
