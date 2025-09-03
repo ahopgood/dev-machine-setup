@@ -1,0 +1,70 @@
+package:
+  libxcb-cursor0:
+    installed: true
+    versions:
+      - 0.1.4-1build1
+command:
+  ls -1 /opt/calibre:
+    exit-status: 0
+    stdout:
+      - bin
+      - calibre
+      - calibre-complete
+      - calibre-customize
+      - calibredb
+      - calibre-debug
+      - calibre-parallel
+      - calibre_postinstall
+      - calibre-server
+      - calibre-smtp
+      - ebook-convert
+      - ebook-device
+      - ebook-edit
+      - ebook-meta
+      - ebook-polish
+      - ebook-viewer
+      - fetch-ebook-metadata
+      - lib
+      - libexec
+      - lrf2lrs
+      - lrfviewer
+      - lrs2lrf
+      - markdown-calibre
+      - plugins
+      - resources
+      - share
+      - translations
+      - web2disk
+    stderr: ""
+    timeout: 10000
+  ls -1 /usr/share/applications/ | grep calibre:
+    title: Check that desktop application entry exists
+    exit-status: 0
+    stdout:
+      - calibre-ebook-edit.desktop
+      - calibre-ebook-viewer.desktop
+      - calibre-gui.desktop
+      - calibre-lrfviewer.desktop
+    stderr: ""
+    timeout: 10000
+  calibre --version:
+    exit-status: 0
+    stdout:
+      - calibre (calibre 8.9)
+    stderr: ""
+    timeout: 10000
+  ls -1 ~/.config/calibre/plugins/ | grep DeDRM:
+    exit-status: 0
+    stdout:
+      - DeDRM
+      - DeDRM.zip
+      - Obok DeDRM.zip
+    stderr: ""
+    timeout: 10000
+  ls -1 /usr/local/bin | grep kobodl-ubuntu:
+    title: kobo downloader app
+    exit-status: 0
+    stdout:
+      - kobodl-ubuntu
+    stderr: ""
+    timeout: 10000

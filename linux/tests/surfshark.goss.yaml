@@ -1,0 +1,27 @@
+service:
+  snap.surfshark.surfsharkd.service:
+    enabled: true
+    running: true
+  snap.surfshark.surfsharkd2.service:
+    enabled: true
+    running: true
+command:
+  ls -1 /var/lib/snapd/desktop/applications/ | grep surfshark:
+    title: Check desktop install for surfshark exists
+    exit-status: 0
+    stdout:
+      - surfshark_surfshark.desktop
+    stderr: ""
+    timeout: 10000
+  snap info surfshark | grep installed | grep 3.5.4:
+    title: Try to validate version even though surfshark doesn't make anything older than latest/stable available for use
+    exit-status: 0
+    stdout:
+      - 'installed:          3.5.4            (71) 147MB -'
+    stderr: ""
+    timeout: 10000
+process:
+  surfsharkd.sh:
+    running: true
+  surfsharkd2.sh:
+    running: true

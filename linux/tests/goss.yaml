@@ -72,7 +72,9 @@ command:
             - user.name=ahopgood
         stderr: ""
         timeout: 10000
+
 gossfile:
+    calibre.goss.yaml: {}
     ddcutil.goss.yaml: {}
     docker.goss.yaml: {}
     dropbox.goss.yaml: {}
@@ -80,5 +82,6 @@ gossfile:
     idea.goss.yaml: {}
     media.goss.yaml: {}
     mise.goss.yaml: {}
+    surfshark.goss.yaml: {}
     virtualbox.goss.yaml: {}
     wine.goss.yaml: {}

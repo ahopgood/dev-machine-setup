@@ -1,3 +1,5 @@
+Symlinks:
+```
 # Linux
 ### Dev Tooling
 Chrome?
@@ -78,9 +80,9 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 # Add the repository to Apt sources:
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+$(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
@@ -138,8 +140,8 @@ sudo apt install --install-recommends winehq-stable
 sudo dpkg -i dropbox_2025.05.20_amd64.deb
 ```
 * Configuration:
-    * Start on login
-    * Selective sync to exclude most directories
+  * Start on login
+  * Selective sync to exclude most directories
   ```
   dropbox autostart -y
   dropbox start
@@ -169,48 +171,48 @@ sudo dpkg -i dropbox_2025.05.20_amd64.deb
 
   ```
 * [Atom](https://github.com/atom/atom/releases/download/v1.61.0-beta0/atom-amd64.deb)
-    * Requires git to be installed first
+  * Requires git to be installed first
 ```
 sudo dpkg -i atom-amd64.deb
 ```
 
 * [Keepass](https://sourceforge.net/projects/keepass/files/KeePass%202.x/2.59/KeePass-2.59-Setup.exe/download)
-    * Requires WINE to be installed first
-    * How to find my keepass vault from the WINE configuration?
-        * `/home/alexander/Dropbox/`
-    * Plugins:
-        * [HaveIBeenPwned](https://github.com/andrew-schofield/keepass2-haveibeenpwned)
-        * [KeePassOTP](https://github.com/Rookiestyle/KeePassOTP)
-        * Put plugins in the following directory:
-      ```
-      ~/.wine/drive_c/Program\ Files/KeePass\ Password\ Safe\ 2/Plugins/
-      ```
+  * Requires WINE to be installed first
+  * How to find my keepass vault from the WINE configuration?
+    * `/home/alexander/Dropbox/`
+  * Plugins:
+    * [HaveIBeenPwned](https://github.com/andrew-schofield/keepass2-haveibeenpwned)
+    * [KeePassOTP](https://github.com/Rookiestyle/KeePassOTP)
+    * Put plugins in the following directory:
+    ```
+    ~/.wine/drive_c/Program\ Files/KeePass\ Password\ Safe\ 2/Plugins/
+    ```
 ### Intellij Idea
 [Jetbrains Intellij IDEA Ultimate](https://www.jetbrains.com/shop/download/II/2023200)
-    * Version 2023.2.8 is the fallback license version
-    * [Install guide](https://www.jetbrains.com/help/idea/installation-guide.html#standalone_linux)
+* Version 2023.2.8 is the fallback license version
+* [Install guide](https://www.jetbrains.com/help/idea/installation-guide.html#standalone_linux)
   ```
   sudo tar -xzf ideaIU-*.tar.gz -C /opt
   cd /opt/idea-IU-232.10335.12/bin/
   bash ./idea.sh
   ```
-    * `Settings`/cog icon > `Create Desktop Entry`
+  * `Settings`/cog icon > `Create Desktop Entry`
   ```
   echo "export PATH=$PATH:/opt/idea-IU-232.10335.12/bin/" > .bash_profile
   ```
-    * Intellij seems to be crashing on both Java 17 and 21 when checking out a project
-        * Create a new test project and add a JDK `~/.local/share/mise/installs/java/17` - no help
-        * Tried changing the boot runtime to 21 - no help
-        * Only seems to be an issue with my https://github.com/ahopgood/dev-machine-setup project
-        * Run intellij via `bash /opt/<version>/bin/idea.sh` so you can see the errors printed to the screen:
-      ```
-      [0824/150644.656705:FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /home/alexander/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox is owned by root and has mode 4755.
-      ```
-        * Change owner and mode
-      ```
-      sudo chown root:root ~/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox 
-      sudo chmod 4755 ~/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox 
-      ```
+  * Intellij seems to be crashing on both Java 17 and 21 when checking out a project
+    * Create a new test project and add a JDK `~/.local/share/mise/installs/java/17` - no help
+    * Tried changing the boot runtime to 21 - no help
+    * Only seems to be an issue with my https://github.com/ahopgood/dev-machine-setup project
+    * Run intellij via `bash /opt/<version>/bin/idea.sh` so you can see the errors printed to the screen:
+    ```
+    [0824/150644.656705:FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /home/alexander/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox is owned by root and has mode 4755.
+    ```
+    * Change owner and mode
+    ```
+    sudo chown root:root ~/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox 
+    sudo chmod 4755 ~/.jbr/jbr_jcef-21-linux-x64-b126.4/lib/chrome-sandbox 
+    ```
 * IntelliJ plugins
   * [https://www.jetbrains.com/help/idea/managing-plugins.html#install_plugin_cmd](https://www.jetbrains.com/help/idea/managing-plugins.html#install_plugin_cmd)
   * Plugins are installed at `ls -l ~/.local/share/JetBrains/IntelliJIdea2023.2/`
@@ -325,4 +327,53 @@ sudo dpkg -i veracrypt-1.25.9-Ubuntu-23.04-amd64.deb
 * [Discord](https://discord.com/download)
 ```
 sudo dpkg -i discord-0.0.108.deb
+```
+#### Calibre
+* [calibre](https://calibre-ebook.com/download_linux)
+* [DeDRM tools](https://github.com/noDRM/DeDRM_tools/tree/master)
+  * [v10.0.3](https://github.com/noDRM/DeDRM_tools/releases/tag/v10.0.3)
+  * Plugins get stored in `/home/alexander/.config/calibre/plugins`
+  * [Plugin installation via command line](https://manual.calibre-ebook.com/generated/en/calibre-customize.html)
+* [kobo book downloader](https://github.com/subdavis/kobo-book-downloader)
+  * This isn't currently working with Obok DeDRM right now.
+```
+sudo apt-get install libxcb-cursor0
+sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin version=8.9.0
+wget https://github.com/noDRM/DeDRM_tools/releases/download/v10.0.3/DeDRM_tools_10.0.3.zip
+unzip DeDRM_tools_10.0.3.zip -d DeDRM
+calibre-customize options --add-plugin DeDRM/Obok_plugin.zip
+calibre-customize options --add-plugin DeDRM/DeDRM_plugin.zip
+wget https://github.com/subdavis/kobo-book-downloader/releases/download/0.12.0/kobodl-ubuntu
+chmod +x kobodl-ubuntu
+mv ./kobodl-ubuntu /usr/local/bin/
+```
+Symlinks
+```
+Symlinking /opt/calibre/ebook-device to /usr/bin/ebook-device
+	Symlinking /opt/calibre/ebook-meta to /usr/bin/ebook-meta
+	Symlinking /opt/calibre/ebook-convert to /usr/bin/ebook-convert
+	Symlinking /opt/calibre/ebook-polish to /usr/bin/ebook-polish
+	Symlinking /opt/calibre/markdown-calibre to /usr/bin/markdown-calibre
+	Symlinking /opt/calibre/web2disk to /usr/bin/web2disk
+	Symlinking /opt/calibre/calibre-server to /usr/bin/calibre-server
+	Symlinking /opt/calibre/lrf2lrs to /usr/bin/lrf2lrs
+	Symlinking /opt/calibre/lrs2lrf to /usr/bin/lrs2lrf
+	Symlinking /opt/calibre/calibre-debug to /usr/bin/calibre-debug
+	Symlinking /opt/calibre/calibredb to /usr/bin/calibredb
+	Symlinking /opt/calibre/calibre-parallel to /usr/bin/calibre-parallel
+	Symlinking /opt/calibre/calibre-customize to /usr/bin/calibre-customize
+	Symlinking /opt/calibre/fetch-ebook-metadata to /usr/bin/fetch-ebook-metadata
+	Symlinking /opt/calibre/calibre-smtp to /usr/bin/calibre-smtp
+	Symlinking /opt/calibre/calibre to /usr/bin/calibre
+	Symlinking /opt/calibre/lrfviewer to /usr/bin/lrfviewer
+	Symlinking /opt/calibre/ebook-viewer to /usr/bin/ebook-viewer
+	Symlinking /opt/calibre/ebook-edit to /usr/bin/ebook-edit
+
+```
+#### Surfshark
+* Linux installer [https://snapcraft.io/surfshark](https://snapcraft.io/surfshark)
+  * [Debian](https://snapcraft.io/install/surfshark/debian)
+  * As I want to avoid snap
+```
+sudo snap install surfshark
 ```
