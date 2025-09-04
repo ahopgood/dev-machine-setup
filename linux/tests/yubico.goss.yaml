@@ -1,0 +1,38 @@
+package:
+  gnome-screenshot:
+    installed: true
+    versions:
+      - 41.0-2build2
+  pcscd:
+    installed: true
+    versions:
+      - 2.0.3-1build1
+
+command:
+  ls -1 /opt/yubico-authenticator-7.2.3-linux/:
+    title: Verify install directory
+    exit-status: 0
+    stdout:
+      - authenticator
+      - data
+      - desktop_integration.sh
+      - helper
+      - lib
+      - linux_support
+      - README.adoc
+    stderr: ""
+    timeout: 10000
+  ls -1 /usr/local/bin/ | grep authenticator:
+    title: Verify authenticator is on the PATH via /usr/local/bin
+    exit-status: 0
+    stdout:
+      - authenticator
+    stderr: ""
+    timeout: 10000
+  ls -1 ~/.local/share/applications/ | grep com.yubico:
+    title: Verify that desktop integration has been enabled
+    exit-status: 0
+    stdout:
+      - com.yubico.yubioath.desktop
+    stderr: ""
+    timeout: 10000

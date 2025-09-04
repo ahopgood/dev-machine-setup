@@ -35,6 +35,7 @@ package:
         installed: true
         versions:
             - 2.42.2-9ubuntu0.1
+
 user:
     alexander:
         exists: true
@@ -85,3 +86,4 @@ gossfile:
     surfshark.goss.yaml: {}
     virtualbox.goss.yaml: {}
     wine.goss.yaml: {}
+    yubico.goss.yaml: {}

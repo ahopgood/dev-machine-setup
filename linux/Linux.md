@@ -372,8 +372,15 @@ Symlinking /opt/calibre/ebook-device to /usr/bin/ebook-device
 ```
 #### Surfshark
 * Linux installer [https://snapcraft.io/surfshark](https://snapcraft.io/surfshark)
-  * [Debian](https://snapcraft.io/install/surfshark/debian)
-  * As I want to avoid snap
 ```
 sudo snap install surfshark
+```
+#### Yubico Authenticator
+* [https://www.yubico.com/products/yubico-authenticator/#h-download-yubico-authenticator](https://www.yubico.com/products/yubico-authenticator/#h-download-yubico-authenticator)
+```
+sudo apt install pcscd gnome-screenshot
+tar -xf yubico-authenticator-7.2.3-linux 
+sudo mv yubico-authenticator-7.2.3-linux /opt/
+sudo ln -s /opt/yubico-authenticator-7.2.3-linux/authenticator /usr/local/bin/
+./opt/yubico-authenticator-7.2.3-linux/desktop_integration.sh --install
 ```
