@@ -10,7 +10,7 @@ package:
   bruno:
     installed: true
     versions:
-      - 2.10.0
+      - 2.10.1
   meld:
     installed: true
     versions:
@@ -45,6 +45,12 @@ package:
     versions:
       - 0.0.108
 command:
+  flatpak list --app | grep fr.handbrake.ghb:
+    exit-status: 0
+    stdout:
+      - "HandBrake\tfr.handbrake.ghb\t1.10.1\tstable\tsystem"
+    stderr: ""
+    timeout: 10000
   flatpak info fr.handbrake.ghb:
     title: verify flatpak install of handbrake
     exit-status: 0
@@ -54,7 +60,7 @@ command:
         - contain-substring:  'Version: 1.10.1'
     stderr: ""
     timeout: 10000
-  ls -l /etc/apt/keyrings | grep bruno.gpg:
+  ls -1 /etc/apt/keyrings | grep bruno.gpg:
     title: Check repository keyring is present
     exit-status: 0
     stdout:
@@ -62,7 +68,7 @@ command:
        - contain-substring: bruno.gpg
     stderr: ""
     timeout: 10000
-  ls -l /etc/apt/sources.list.d/ | grep bruno:
+  ls -1 /etc/apt/sources.list.d/ | grep bruno:
     title: Check apt repository is present
     exit-status: 0
     stdout:
@@ -75,5 +81,20 @@ command:
     exit-status: 0
     stdout:
       - jcfp-ubuntu-nobetas-noble.sources
+    stderr: ""
+    timeout: 10000
+  flatpak info org.freac.freac:
+    title: verify flatpak install of fre:ac
+    exit-status: 0
+    stdout:
+      and:
+        - contain-substring: 'ID: org.freac.freac'
+        - contain-substring: 'Version: 1.1.7'
+    stderr: ""
+    timeout: 10000
+  flatpak list --app | grep 'org.freac.freac':
+    exit-status: 0
+    stdout:
+      - "fre:ac\torg.freac.freac\t1.1.7\tstable\tsystem"
     stderr: ""
     timeout: 10000

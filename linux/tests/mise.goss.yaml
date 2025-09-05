@@ -2,7 +2,7 @@ package:
   mise:
     installed: true
     versions:
-      - 2025.8.16
+      - 2025.8.21
 command:
   ls -l /etc/apt/keyrings | grep mise-archive-keyring.gpg:
     title: Check repository keyring is present

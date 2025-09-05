@@ -1,7 +1,36 @@
-Symlinks:
-```
 # Linux
-### Dev Tooling
+## Gaming
+### [WINE](https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu)
+```
+sudo dpkg --add-architecture i386
+sudo mkdir -pm755 /etc/apt/keyrings
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-$(lsb_release -cs).sources
+sudo apt update
+sudo apt install --install-recommends winehq-stable
+```
+* [winetricks]()
+* [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/) a Wine / Proton UI
+```
+flatpak install flathub net.davidotek.pupgui2
+```
+* 
+### Lutris
+* Requires wine
+* [Ubuntu deb installer](https://github.com/lutris/lutris/releases)
+```
+sudo apt-get install python3-setproctitle python3-magic cabextract fluid-soundfont-gs vulkan-tools
+sudo dpkg -i lutris_0.5.18_all.deb
+```
+* [Lutris guide to installing drivers]https://github.com/lutris/docs/blob/master/InstallingDrivers.md#amd--intel()
+```
+sudo add-apt-repository ppa:kisak/kisak-mesa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386
+```
+* [Vulkan]()
+* [DXVK]()
+* [VKD3D]()
+
+## Dev Tooling
 Chrome?
 
 Mise
@@ -13,6 +42,7 @@ echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=amd64] http
 sudo apt update
 sudo apt install -y mise
 ```
+
 * `mise use -g bats`
 * `mise use -g bats-extra`
 * `mise use -g dive`
@@ -121,18 +151,6 @@ sudo apt-get update &&
   sudo apt-get install packer=1.9.2-1 &&
   sudo apt install vagrant=2.4.1-1
 ```
-
-### [WINE](https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu)
-```
-sudo dpkg --add-architecture i386
-sudo mkdir -pm755 /etc/apt/keyrings
-wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-$(lsb_release -cs).sources
-sudo apt update
-sudo apt install --install-recommends winehq-stable
-```
-* [winetricks]()
-* Wine / Proton UI []()
 
 ## Manual installations
 * [Dropbox](https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2025.05.20_amd64.deb)
@@ -383,4 +401,10 @@ tar -xf yubico-authenticator-7.2.3-linux
 sudo mv yubico-authenticator-7.2.3-linux /opt/
 sudo ln -s /opt/yubico-authenticator-7.2.3-linux/authenticator /usr/local/bin/
 ./opt/yubico-authenticator-7.2.3-linux/desktop_integration.sh --install
+```
+
+#### Fre:Ac
+* [https://www.freac.org/downloads-mainmenu-33](https://www.freac.org/downloads-mainmenu-33)
+```
+flatpak install flathub org.freac.freac
 ```

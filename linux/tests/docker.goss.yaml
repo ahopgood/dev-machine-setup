@@ -6,19 +6,19 @@ package:
     docker-buildx-plugin:
         installed: true
         versions:
-            - 0.26.1-1~ubuntu.24.04~noble
+            - 0.27.0-1~ubuntu.24.04~noble
     docker-ce:
         installed: true
         versions:
-            - 5:28.3.3-1~ubuntu.24.04~noble
+            - 5:28.4.0-1~ubuntu.24.04~noble
     docker-ce-cli:
         installed: true
         versions:
-            - 5:28.3.3-1~ubuntu.24.04~noble
+            - 5:28.4.0-1~ubuntu.24.04~noble
     docker-compose-plugin:
         installed: true
         versions:
-            - 2.39.1-1~ubuntu.24.04~noble
+            - 2.39.2-1~ubuntu.24.04~noble
 
 group:
     docker:
