@@ -1,4 +1,13 @@
 package:
+  # Optional Lutris quality of life packages
+  mangohud:
+    installed: true
+    versions:
+      - 0.6.9.1-2build1
+  winetricks:
+    installed: true
+    versions:
+      - 20240105-2
   # Drivers
   libgl1-mesa-dri:i386:
     installed: true

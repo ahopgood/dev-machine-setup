@@ -1,4 +1,9 @@
 # Linux
+Slow header retrieval
+```
+0% [Connecting to ubuntu-mirror-3.ps5.canonical.com (185.125.190.83)] 
+```
+* https://askubuntu.com/questions/574569/apt-get-stuck-at-0-connecting-to-us-archive-ubuntu-com
 ## Gaming
 ### [WINE](https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu)
 ```
@@ -9,12 +14,7 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/
 sudo apt update
 sudo apt install --install-recommends winehq-stable
 ```
-* [winetricks]()
-* [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/) a Wine / Proton UI
-```
-flatpak install flathub net.davidotek.pupgui2
-```
-* 
+
 ### Lutris
 * Requires wine
 * [Performance tweaks](https://github.com/lutris/docs/blob/master/Performance-Tweaks.md)
@@ -32,6 +32,17 @@ sudo add-apt-repository ppa:kisak/kisak-mesa && sudo dpkg --add-architecture i38
 * [DXVK](https://github.com/doitsujin/dxvk)
   * [Lutris DXVK guide]( https://github.com/lutris/docs/blob/master/HowToDXVK.md)
 * [VKD3D](https://github.com/lutris/vkd3d)
+* [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/) a Wine / Proton UI
+```
+flatpak install flathub net.davidotek.pupgui2
+```
+* [winetricks](https://github.com/Winetricks/winetricks)
+  * `sudo apt-get install winetricks`
+* [MangoHUD](https://github.com/flightlessmango/MangoHud)
+  * `sudo apt-get install mangohud`
+* [Gamescope](https://github.com/ValveSoftware/gamescope)
+  * 
+### Steam 
 
 ## Dev Tooling
 Chrome?
