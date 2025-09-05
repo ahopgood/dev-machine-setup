@@ -17,6 +17,7 @@ flatpak install flathub net.davidotek.pupgui2
 * 
 ### Lutris
 * Requires wine
+* [Performance tweaks](https://github.com/lutris/docs/blob/master/Performance-Tweaks.md)
 * [Ubuntu deb installer](https://github.com/lutris/lutris/releases)
 ```
 sudo apt-get install python3-setproctitle python3-magic cabextract fluid-soundfont-gs vulkan-tools
@@ -26,9 +27,9 @@ sudo dpkg -i lutris_0.5.18_all.deb
 ```
 sudo add-apt-repository ppa:kisak/kisak-mesa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386
 ```
-* [Vulkan]()
-* [DXVK]()
-* [VKD3D]()
+* [DXVK](https://github.com/doitsujin/dxvk)
+  * [Lutris DXVK guide]( https://github.com/lutris/docs/blob/master/HowToDXVK.md)
+* [VKD3D](https://github.com/lutris/vkd3d)
 
 ## Dev Tooling
 Chrome?
