@@ -19,6 +19,8 @@ flatpak install flathub net.davidotek.pupgui2
 * Requires wine
 * [Performance tweaks](https://github.com/lutris/docs/blob/master/Performance-Tweaks.md)
 * [Ubuntu deb installer](https://github.com/lutris/lutris/releases)
+* [Writing installers](https://github.com/lutris/lutris/blob/master/docs/installers.rst)
+* [Command line options](https://github.com/lutris/lutris/blob/master/README.rst#command-line-options) might be useful for installing games/scripting installation
 ```
 sudo apt-get install python3-setproctitle python3-magic cabextract fluid-soundfont-gs vulkan-tools
 sudo dpkg -i lutris_0.5.18_all.deb
