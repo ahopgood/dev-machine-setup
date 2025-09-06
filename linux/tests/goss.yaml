@@ -35,7 +35,6 @@ package:
         installed: true
         versions:
             - 2.42.2-9ubuntu0.1
-
 user:
     alexander:
         exists: true
@@ -54,6 +53,22 @@ user:
         home: /home/alexander
         shell: /bin/bash
 command:
+    flatpak info dev.zed.Zed:
+        title: verify flatpak install of zed to replace atom
+        exit-status: 0
+        stdout:
+            and:
+                - contain-substring: 'ID: dev.zed.Zed'
+                - contain-substring: 'Version: v0.202.7'
+        stderr: ""
+        timeout: 10000
+    flatpak list --app | grep  dev.zed.Zed:
+        title: verify flatpak install of zed to replace atom
+        exit-status: 0
+        stdout:
+            - "Zed\tdev.zed.Zed\tv0.202.7\tstable\tsystem"
+        stderr: ""
+        timeout: 10000
     flatpak remotes | grep flathub:
         title: Verify flathub remote (output is tab separated)
         exit-status: 0
