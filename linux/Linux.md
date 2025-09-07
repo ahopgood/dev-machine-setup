@@ -26,8 +26,6 @@ wget https://gitlab.com/ryzen-controller-team/ryzen-controller/-/jobs/3178939815
 ### Lutris
 * Requires wine
 * [Performance tweaks](https://github.com/lutris/docs/blob/master/Performance-Tweaks.md)
-* Writing installers https://github.com/lutris/lutris/blob/master/docs/installers.rst
-* Command line https://github.com/lutris/lutris/blob/master/README.rst#command-line-options might be useful for installing games/scripting installation
 * [Ubuntu deb installer](https://github.com/lutris/lutris/releases)
 * [Writing installers](https://github.com/lutris/lutris/blob/master/docs/installers.rst)
 * [Command line options](https://github.com/lutris/lutris/blob/master/README.rst#command-line-options) might be useful for installing games/scripting installation
@@ -54,7 +52,10 @@ flatpak install flathub net.davidotek.pupgui2
 * [Lutris Asgard](https://github.com/lutris/asgard)
   * Used to run legacy games - not installed yet
 ### Steam 
-
+```
+sudo apt install steam
+```
+* Perhaps I should have followed [https://repo.steampowered.com/steam/](https://repo.steampowered.com/steam/) this guide?
 ## Dev Tooling
 Chrome?
 
@@ -315,6 +316,9 @@ To fix:
 * `ctrl + end` to jump to the end of a line
 * `alt + arrow` to move word by word
 * `ctrl + arrow` to move word by word
+
+#### TODO
+* Some sort of process monitor / visualiser
 
 ## Media
 #### VLC

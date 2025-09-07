@@ -1,4 +1,8 @@
 package:
+  steam:
+    installed: true
+    versions:
+      - 1:1.0.0.79~ds-2
   # Optional Lutris quality of life packages
   mangohud:
     installed: true
