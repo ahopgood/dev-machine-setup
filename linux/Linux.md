@@ -16,13 +16,35 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/
 sudo apt update
 sudo apt install --install-recommends winehq-stable
 ```
-### UI Ryzen Controller
+### LACT
+* [https://github.com/ilya-zlobintsev/LACT/releases/](https://github.com/ilya-zlobintsev/LACT/releases/)
+```
+sudo apt-get install ocl-icd-opencl-dev
+
+wget https://github.com/ilya-zlobintsev/LACT/releases/download/v0.8.1/lact-0.8.1-0.amd64.ubuntu-2404.deb
+sudo chmod 755 lact-0.8.1-0.amd64.ubuntu-2404.deb 
+sudo dpkg -i lact-0.8.1-0.amd64.ubuntu-2404.deb 
+sudo systemctl enable --now lactd
+```
+
+### UI Ryzen Controller - DEPRECATEd
+* Build [RyzenAdj](https://github.com/FlyGoat/RyzenAdj?tab=readme-ov-file#build) first
+```
+sudo apt-get install cmake build-essential cmake libpci-dev
+```
 * [Ryzen-controller](https://gitlab.com/ryzen-controller-team/ryzen-controller/)
 * [Release](https://gitlab.com/ryzen-controller-team/ryzen-controller/-/releases)
 ```
-wget https://gitlab.com/ryzen-controller-team/ryzen-controller/-/jobs/3178939815/artifacts/file/dist/deb/ryzen-controller_2.6.0_amd64.deb
+sudo apt-get install gconf2 gconf-service libappindicator1
+wget https://cdn.artifacts.gitlab-static.net/94/fa/94fab515ceab957d4705395d68832f86f2a57e3b20ac4399cf392306dbe7f1af/2022_10_16/3178939815/3463085063/artifacts.zip?response-content-disposition=attachment%3B%20filename%3D%22artifacts.zip%22%3B%20filename%2A%3DUTF-8%27%27artifacts.zip&response-content-type=application%2Fzip&Expires=1757312477&KeyName=gprd-artifacts-cdn&Signature=e8eu8bITc0N3qXmWHoLOxHEfj_c=
+unzip artifacts.zip -d artifacts
+mv artifacts/dist/deb/ryzen-controller_2.6.0_amd64.deb .
+sudo chmod 755 ryzen-controller_2.6.0_amd64.deb
+sudo dpkg -i ryzen-controller_2.6.0_amd64.deb
 ```
-* **NOTE** These deb files return the error `dpkg-deb: error: 'ryzen-controller_2.5.4_amd64.deb' is not a Debian format archive` when run
+* **NOTE** These deb files return the error `dpkg-deb: error: 'ryzen-controller_2.5.4_amd64.deb' is not a Debian format archive` when run using `wget https://gitlab.com/ryzen-controller-team/ryzen-controller/-/jobs/3178939815/artifacts/file/dist/deb/ryzen-controller_2.6.0_amd64.deb`
+* Download via the artifacts button in Gitlab or the above link
+* gconf2 doesn't exist on Ubuntu 24.04
 ### Lutris
 * Requires wine
 * [Performance tweaks](https://github.com/lutris/docs/blob/master/Performance-Tweaks.md)
@@ -33,7 +55,7 @@ wget https://gitlab.com/ryzen-controller-team/ryzen-controller/-/jobs/3178939815
 sudo apt-get install python3-setproctitle python3-magic cabextract fluid-soundfont-gs vulkan-tools
 sudo dpkg -i lutris_0.5.18_all.deb
 ```
-* [Lutris guide to installing drivers]https://github.com/lutris/docs/blob/master/InstallingDrivers.md#amd--intel()
+* [Lutris guide to installing drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md#amd--intel)
 ```
 sudo add-apt-repository ppa:kisak/kisak-mesa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386
 ```
@@ -48,6 +70,7 @@ flatpak install flathub net.davidotek.pupgui2
 * [Gamescope](https://github.com/ValveSoftware/gamescope)
   * Doesn't have a version available on ubuntu 24.04
   * [Guide to build it yourself here](https://gist.github.com/russiantux/592b1267591c011bf765b14590774a5f)
+  * Builds off the [official build guide here](https://github.com/ValveSoftware/gamescope?tab=readme-ov-file#building)
   * Or use flatpak?
 * [Lutris Asgard](https://github.com/lutris/asgard)
   * Used to run legacy games - not installed yet

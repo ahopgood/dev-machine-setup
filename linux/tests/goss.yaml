@@ -3,10 +3,6 @@ package:
         installed: true
         versions:
             - 23.01+dfsg-11
-    atom-beta:
-        installed: true
-        versions:
-            - 1.61.0-beta0
     ca-certificates:
         installed: true
         versions:

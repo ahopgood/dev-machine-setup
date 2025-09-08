@@ -48,7 +48,7 @@ command:
   flatpak list --app | grep fr.handbrake.ghb:
     exit-status: 0
     stdout:
-      - "HandBrake\tfr.handbrake.ghb\t1.10.1\tstable\tsystem"
+      - "HandBrake\tfr.handbrake.ghb\t1.10.2\tstable\tsystem"
     stderr: ""
     timeout: 10000
   flatpak info fr.handbrake.ghb:
@@ -57,7 +57,7 @@ command:
     stdout:
       and:
         - contain-substring: 'ID: fr.handbrake.ghb'
-        - contain-substring:  'Version: 1.10.1'
+        - contain-substring:  'Version: 1.10.2'
     stderr: ""
     timeout: 10000
   ls -1 /etc/apt/keyrings | grep bruno.gpg:
