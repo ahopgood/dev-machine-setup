@@ -1,0 +1,200 @@
+package:
+  cmake:
+    installed: true
+    versions:
+      - 3.28.3-1build7
+  glslang-tools:
+    installed: true
+    versions:
+      - 15.1.0-2~ubuntu0.24.04.1
+  libavif-dev:
+    installed: true
+    versions:
+      - 1.0.4-1ubuntu3
+  libbenchmark-dev:
+    installed: true
+    versions:
+      - 1.8.3-3
+  libbenchmark1.8.3:
+    installed: true
+    versions:
+      - 1.8.3-3
+  libcap-dev:
+    installed: true
+    versions:
+      - 1:2.66-5ubuntu2.2
+  libdecor-0-dev:
+    installed: true
+    versions:
+      - 0.2.2-1build2
+  libdisplay-info1:
+    installed: true
+    versions:
+      - 0.1.1-2build1
+  libdrm-dev:
+    installed: true
+    versions:
+      - 2.4.122-1~ubuntu0.24.04.1
+  libeis-dev:
+    installed: true
+    versions:
+      - 1.2.1-1
+  libevdev-dev:
+    installed: true
+    versions:
+      - 1.13.1+dfsg-1build1
+  libgav1-1:
+    installed: true
+    versions:
+      - 0.18.0-1build3
+  libglm-dev:
+    installed: true
+    versions:
+      - 0.9.9.8+ds-7
+  libgudev-1.0-dev:
+    installed: true
+    versions:
+      - 1:238-5ubuntu1
+  libinput-dev:
+    installed: true
+    versions:
+      - 1.25.0-1ubuntu3.1
+  libmtdev-dev:
+    installed: true
+    versions:
+      - 1.1.6-1.1build1
+  libpixman-1-dev:
+    installed: true
+    versions:
+      - 0.42.2-1build1
+  libsdl2-dev:
+    installed: true
+    versions:
+      - 2.30.0+dfsg-1ubuntu3.1
+  libseat-dev:
+    installed: true
+    versions:
+      - 0.8.0-1
+  libseat1:
+    installed: true
+    versions:
+      - 0.8.0-1
+  libstb0:
+    installed: false
+  libvulkan-dev:
+    installed: true
+    versions:
+      - 1.3.275.0-1build1
+  libwacom-dev:
+    installed: true
+    versions:
+      - 2.10.0-2
+  libwayland-dev:
+    installed: true
+    versions:
+      - 1.22.0-2.1build1
+  libx11-dev:
+    installed: true
+    versions:
+      - 2:1.8.7-1build1
+  libx11-xcb-dev:
+    installed: true
+    versions:
+      - 2:1.8.7-1build1
+  libxcb-composite0-dev:
+    installed: true
+    versions:
+      - 1.15-1ubuntu2
+  libxcb-ewmh-dev:
+    installed: true
+    versions:
+      - 0.4.1-1.1build3
+  libxcb-ewmh2:
+    installed: true
+    versions:
+      - 0.4.1-1.1build3
+  libxcb-icccm4-dev:
+    installed: true
+    versions:
+      - 0.4.1-1.1build3
+  libxcb-res0-dev:
+    installed: true
+    versions:
+      - 1.15-1ubuntu2
+  libxcb-shape0-dev:
+    installed: true
+    versions:
+      - 1.15-1ubuntu2
+  libxcb-xfixes0-dev:
+    installed: true
+    versions:
+      - 1.15-1ubuntu2
+  libxcomposite-dev:
+    installed: true
+    versions:
+      - 1:0.4.5-1build3
+  libxcursor-dev:
+    installed: true
+    versions:
+      - 1:1.2.1-1build1
+  libxdamage-dev:
+    installed: true
+    versions:
+      - 1:1.1.6-1build1
+  libxkbcommon-dev:
+    installed: true
+    versions:
+      - 1.6.0-1build1
+  libxmu-dev:
+    installed: true
+    versions:
+      - 2:1.1.3-3build2
+  libxmu-headers:
+    installed: true
+    versions:
+      - 2:1.1.3-3build2
+  libxres-dev:
+    installed: true
+    versions:
+      - 2:1.2.1-1build1
+  libxtst-dev:
+    installed: true
+    versions:
+      - 2:1.2.3-1.1build1
+  libxxf86vm-dev:
+    installed: true
+    versions:
+      - 1:1.1.4-1build4
+  libyuv0:
+    installed: true
+    versions:
+      - 0.0~git202401110.af6ac82-1
+  meson:
+    installed: true
+    versions:
+      - 1.3.2-1ubuntu1
+  pkg-config:
+    installed: true
+    versions:
+      - 1.8.1-2build1
+  wayland-protocols:
+    installed: true
+    versions:
+      - 1.38-1~ubuntu0.24.04.1
+  vulkan-tools:
+    installed: true
+    versions:
+      - 1.3.275.0+dfsg1-1
+command:
+  gamescope --version:
+    exit-status: 0
+    stdout: ""
+    stderr:
+      - "[gamescope] [\e[0;34mInfo\e[0m]  \e[0;37mconsole:\e[0m gamescope version 3.14.24-24-g5e8fddf"
+    timeout: 10000
+  which gamescope:
+    exit-status: 0
+    stdout:
+      - \/usr/local/bin/gamescope
+    stderr: ""
+    timeout: 10000

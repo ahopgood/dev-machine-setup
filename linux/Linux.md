@@ -74,6 +74,32 @@ flatpak install flathub net.davidotek.pupgui2
   * Or use flatpak?
 * [Lutris Asgard](https://github.com/lutris/asgard)
   * Used to run legacy games - not installed yet
+### gamescope
+```
+sudo apt install libbenchmark1.8.3 libdisplay-info1 libevdev-dev libgav1-1 libgudev-1.0-dev libmtdev-dev libseat1 libstb0 libwacom-dev libxcb-ewmh2 libxcb-shape0-dev libxcb-xfixes0-dev libxmu-headers libyuv0 libx11-xcb-dev libxres-dev  libxmu-dev libseat-dev libinput-dev libxcb-composite0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-res0-dev libcap-dev wayland-protocols libvulkan-dev libwayland-dev libx11-dev cmake pkg-config meson libxdamage-dev libxcomposite-dev libxcursor-dev libxxf86vm-dev libxtst-dev libxkbcommon-dev libdrm-dev libpixman-1-dev libdecor-0-dev glslang-tools libbenchmark-dev libsdl2-dev libglm-dev libeis-dev libavif-dev vulkan-tools
+git reset 5e8fddf --hard; git clean -fxd; git submodule update --init --force --recursive
+meson setup --wipe build
+sudo meson install -C build/ --skip-subprojects
+```
+* Verify via `gamescope -- vkcube`
+#### Troubleshooting
+```
+vulkan: vkAllocateDescriptorSets failed
+```
+* [Reddit issue](https://www.reddit.com/r/linux_gaming/comments/15s4yz0/gamescope_fails_to_start_with_vulkan_error/)
+  * I get a different error running `sudo gamescope -- vkcube`
+```
+SDL_Vulkan_CreateSurface failed: VK_KHR_wayland_surface extension is not enabled in the Vulkan instance.terminate called without an active exception
+```
+* [https://github.com/ValveSoftware/gamescope/issues/1845#issuecomment-2993789172](https://github.com/ValveSoftware/gamescope/issues/1845#issuecomment-2993789172)
+* Run using the `--backend sdl` flag
+```
+vulkan: No DRI3 support detected - required for presentation
+```
+* This [stack overflow](https://askubuntu.com/questions/1554956/ubuntu-24-wayland-vulkan-error-on-9070-xt) error seems to indicate that the `ppa:kisak/kisak-mesa` repository is at fault.  
+* Thi package was installed as part of the Lutris setup instructions though.
+* Looks to be an issue with running under `sudo`
+
 ### Steam 
 ```
 sudo apt install steam
@@ -357,6 +383,10 @@ libdvdcss2 lirc vlc-plugin-fluidsynth vlc-plugin-jack vlc-plugin-pipewire vlc-pl
 ```
 sudo flatpak update && flatpak install fr.handbrake.ghb
 ```
+#### DVD Decryption
+```
+sudo apt-get install brasero
+```
 #### Bruno
 * https://www.usebruno.com/downloads
 ```
@@ -462,4 +492,10 @@ sudo ln -s /opt/yubico-authenticator-7.2.3-linux/authenticator /usr/local/bin/
 * [https://www.freac.org/downloads-mainmenu-33](https://www.freac.org/downloads-mainmenu-33)
 ```
 flatpak install flathub org.freac.freac
+```
+#### deluge
+* [https://deluge-torrent.org/download/](https://deluge-torrent.org/download/)
+* [https://deluge-torrent.org/installing/linux/ubuntu/#deluge-ppa-repository](https://deluge-torrent.org/installing/linux/ubuntu/#deluge-ppa-repository)
+```
+sudo apt-get install deluge
 ```

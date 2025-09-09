@@ -84,6 +84,7 @@ gossfile:
     ddcutil.goss.yaml: {}
     docker.goss.yaml: {}
     dropbox.goss.yaml: {}
+    gamescope.goss.yaml: {}
     gaming.goss.yaml: {}
     hashicorp.goss.yaml: {}
     idea.goss.yaml: {}

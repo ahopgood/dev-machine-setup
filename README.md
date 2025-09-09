@@ -64,4 +64,4 @@ Design notes:
 * Python 2
 * [Homebrew](https://brew.sh/)
   * Requires XCode command line tools `xcode-select --install`
-* [Rosetta2](https://support.apple.com/en-gb/HT211861) - for x86_64 translation to ARM instructions
+  * [Rosetta2](https://support.apple.com/en-gb/HT211861) - for x86_64 translation to ARM instructions

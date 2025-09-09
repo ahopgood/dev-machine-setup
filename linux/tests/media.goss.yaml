@@ -44,6 +44,14 @@ package:
     installed: true
     versions:
       - 0.0.108
+  deluge:
+    installed: true
+    versions:
+      - 2.1.2~dev0+20240121-1
+  brasero:
+    installed: true
+    versions:
+      - 3.12.3-2build4
 command:
   flatpak list --app | grep fr.handbrake.ghb:
     exit-status: 0
