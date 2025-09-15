@@ -1,0 +1,13 @@
+package:
+  gpg:
+    installed: true
+    versions:
+      - 2.4.4-2ubuntu17.3
+  isolinux:
+    installed: true
+    versions:
+      - 3:6.04~git20190206.bf6db5b4+dfsg1-3ubuntu3
+  xorriso:
+    installed: true
+    versions:
+      - 1:1.5.6-1.1ubuntu3

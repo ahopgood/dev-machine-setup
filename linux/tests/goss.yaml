@@ -88,6 +88,7 @@ gossfile:
     gaming.goss.yaml: {}
     hashicorp.goss.yaml: {}
     idea.goss.yaml: {}
+    iso-installer.goss.yaml: {}
     media.goss.yaml: {}
     mise.goss.yaml: {}
     surfshark.goss.yaml: {}

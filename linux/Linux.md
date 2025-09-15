@@ -499,3 +499,14 @@ flatpak install flathub org.freac.freac
 ```
 sudo apt-get install deluge
 ```
+
+## DevOps
+### System provisioning
+* [Cubic - Custom Ubuntu ISO Creator](https://github.com/PJ-Singh-001/Cubic)
+```
+sudo apt-add-repository universe
+sudo apt-add-repository ppa:cubic-wizard/release
+sudo apt update
+sudo apt install --no-install-recommends cubic
+```
+* [Detailed Ubuntu instructions](https://github.com/PJ-Singh-001/Cubic/wiki/Install-Cubic#-ubuntu-and-derivatives)
