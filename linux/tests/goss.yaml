@@ -46,6 +46,7 @@ user:
                 - contain-element: plugdev
                 - contain-element: sudo
                 - contain-element: users
+                - contain-element: vboxusers
         home: /home/alexander
         shell: /bin/bash
 command:
@@ -55,14 +56,14 @@ command:
         stdout:
             and:
                 - contain-substring: 'ID: dev.zed.Zed'
-                - contain-substring: 'Version: v0.202.7'
+                - contain-substring: 'Version: v0.203.5'
         stderr: ""
         timeout: 10000
     flatpak list --app | grep  dev.zed.Zed:
         title: verify flatpak install of zed to replace atom
         exit-status: 0
         stdout:
-            - "Zed\tdev.zed.Zed\tv0.202.7\tstable\tsystem"
+            - "Zed\tdev.zed.Zed\tv0.203.5\tstable\tsystem"
         stderr: ""
         timeout: 10000
     flatpak remotes | grep flathub:

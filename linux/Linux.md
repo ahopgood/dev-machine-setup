@@ -214,6 +214,10 @@ wget https://download.virtualbox.org/virtualbox/7.0.26/Oracle_VM_VirtualBox_Exte
 VBoxManage extpack install --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c Oracle_VM_VirtualBox_Extension_Pack-7.0.26.vbox-extpack
 ```
 Get the error `VBoxManage: error: Too many extension pack names given to "extpack uninstall"` due to trailing space, really Oracle, really!
+* Add user to vboxusers group
+```
+sudo usermod -a -G vboxusers alexander
+```
 
 ### Hashicorp tools
 ```
