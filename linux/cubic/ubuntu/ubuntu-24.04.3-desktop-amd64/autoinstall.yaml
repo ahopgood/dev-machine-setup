@@ -16,6 +16,7 @@ autoinstall:
         dhcp4: true
     version: 2
     wifis: {}
+
   storage:
     layout:
       name: lvm

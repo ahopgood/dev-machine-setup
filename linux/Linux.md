@@ -206,7 +206,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] 
 * Install
 ```agsl
 sudo apt-get update
-sudo apt-get install virtualbox=7.0
+sudo apt-get install virtualbox-7.2
 ```
 * Install Extension pack
 ```
